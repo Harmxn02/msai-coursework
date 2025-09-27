@@ -1,0 +1,127 @@
+\documentclass[a4paper, 12pt]{article}
+
+% Packages
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage[margin=2.5cm]{geometry}
+
+% Document information
+\title{Logica, verzamelingen en relaties \textemdash{} Huiswerk 1}
+\author{Harman Preet Singh}
+
+% Custom theorem environments
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}{Definition}
+\newtheorem{example}{Example}
+
+\begin{document}
+% chktex-file 44
+
+\maketitle
+% \tableofcontents
+
+\section{Opgave 1}
+\textbf{A}
+
+\[
+\begin{tabular}{|c|c|c|c|c|}
+	\hline
+	${p}$ & ${q}$ & ${q}\rightarrow{p}$ & $\neg{p}$ & $\neg{p}\lor({q}\rightarrow{q})$ \\
+	\hline
+	1 & 0 & 1 & 0 & 1 \\
+	1 & 1 & 1 & 0 & 1 \\
+	0 & 1 & 0 & 1 & 1 \\
+	0 & 0 & 1 & 1 & 1 \\
+	\hline
+\end{tabular}
+\]
+
+In alle vier gevallen is $\phi$ waar, dus het is een tautologie.
+
+\vspace{2cm}
+
+\noindent\textbf{B}
+
+Ik gebruik eerst de standaardequivalentie $q \rightarrow p$ = $\neg q \lor p$. Dus:
+
+\begin{center}
+	$\phi$ = $\neg p \lor (q \rightarrow p)$ = $\neg p \lor (\neg q \lor p)$ \\
+\end{center}
+
+Dan verander ik de haakjes en de volgorde van de termen (mag door de commutatieve en associatieve wetten voor $\lor$):
+\begin{center}
+	$\phi$ = $(\neg p \lor p) \lor \neg q$ \\
+\end{center}
+
+En dan pas ik de wet van uitgesloten derde toe op ($\neg p \lor p$). Dus ($\neg p \lor p$) schrijf ik als $(T)$ (tautologie):
+\begin{center}
+	$\phi$ = $(T) \lor \neg q$ = $T$ \\
+\end{center}
+
+Dus $\phi$ is een tautologie omdat Tautologie of ($\lor$) `iets anders' altijd een Tautologie is
+
+
+
+
+
+
+\section{Opgave 2}
+\textbf{A}
+
+Ik zal eerst de implicaties herschrijven met behulp van de standaardequivalentie $p \rightarrow q$ = $\neg p \lor q$. Dus eerst de linkerkant:
+\begin{center}
+	$(p \land q) \rightarrow r$ = $\neg(p \land q) \lor r$ = $\neg p \lor \neg p \lor r$ \\
+\end{center}
+
+Daardoor word de formule:
+\begin{center}
+	$\phi$ = $(\neg p \lor \neg q \lor r) \rightarrow (\neg p \land q)$ \\
+\end{center}
+
+En dan herschrijf ik beide kanten nogmaals met dezelfde standaardequivalentie. Er komt een $\neg$ (niet) te staan voor het linkerdeel, en de implicatie ($\rightarrow$) wordt een disjunctie ($\lor$):
+\begin{center}
+	$\phi$ = $\neg(\neg p \lor \neg q \lor r) \lor (\neg p \land q)$ \\
+\end{center}
+
+Dan ga ik de negaties binnen de haakjes wegwerken:
+\begin{center}
+	$\phi$ = $(p \land q \land \neg r) \lor (\neg p \land q)$ \\
+\end{center}
+
+En dan heb je de DNF (Disjunctieve Normale Form). Het enige verschil hier is dat ik het nu $\phi_{DNF}$ noem.
+\begin{center}
+	$\phi_{DNF}$ = $(p \land q \land \neg r) \lor (\neg p \land q)$ \\
+\end{center}
+
+\noindent\textbf{B}
+
+\textemdash{}
+\vspace{2cm}
+
+
+\section{Opgave 3}
+\textbf{A}
+
+\begin{itemize}
+	\item $p$: Je haalt je hand uit de koektrommel.
+	\item $q$: Je krijgt een koekje.
+\end{itemize}
+
+Formule: $\neg p \rightarrow \neg q$
+
+\noindent\textbf{B}
+
+\begin{itemize}
+	\item $p$: Eva geeft een appel aan Adam.
+	\item $q$: Adam eet die appel op.
+\end{itemize}
+
+Formule: $p \land \neg q$
+
+
+\end{document}
