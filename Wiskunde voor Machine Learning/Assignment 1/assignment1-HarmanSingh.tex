@@ -7,11 +7,12 @@
 
 \title{Assignment 1 \\ IB3702 Mathematics for Machine learning}
 \author{Harman Singh} % please overwrite this line with your name
-\date{Month Day, Year} % todo please overwrite this line with the date of submission
+\date{October 3, 2025} % please overwrite this line with the date of submission
 
 \begin{document}
 \maketitle
 
+\pagebreak
 \section*{Problem 1}
 
 \textbf{Question 1.1}
@@ -39,19 +40,433 @@
 
 \end{enumerate}
 
+\textbf{Question 1.2}
+
+I seperate this equation in two parts:
+\begin{itemize}
+	\item Left part: ${(-1)}^n$
+	\item Right part: $\frac{n}{n+1}$
+\end{itemize}
+
+For the left part, for even values of $n$, the result will always be 1, and for odd values of $n$, the result will always be -1
+
+Then for the right part, as $n$ increases, the result will get closer and closer to 1, but will never reach 1. So the limit of the right part is 1.
+
+So, if we combine both parts, we can see that for even values of $n$, the result will be 1 * (something that approaches 1) which will approach 1. And for odd values of $n$, the result will be -1 * (something that approaches 1) which will approach -1.
+
+This means that the sequence diverges, since it does not approach 1 single value.
+
+
+\pagebreak
 \section*{Problem 2}
 
-\begin{enumerate}[(a)]
-	\item answer/solution to this problem
-	\item answer/solution to this problem
-\end{enumerate}
+\textbf{Question 2.1}
 
+% \[
+% 	\sum_{n=2}^{\infty} \frac{1}{n(\ln n)}
+% \]
+
+To know if this series converges or diverges, I will use the integral test. For this, I have to rewrite the series in function form (so it's easier for me to visualise) and then I convert it to integral form:
+
+\[
+f(x) = \frac{1}{x(\ln x)} \rightarrow \int_{2}^{\infty} \frac{1}{x(\ln x)} dx
+\]
+
+Then we do substituion:
+
+\begin{itemize}
+	\item $u$ = $\ln x$
+	\item $du$ = $\frac{1}{x} dx$
+	\item $dx$ = $x \cdot du$
+\end{itemize}
+
+\[
+\int_{2}^{\infty} \frac{1}{x(\ln x)} dx = \frac{1}{x \cdot u} \cdot x \hspace{0.1cm} du = \frac{1}{u} du 
+\]
+
+initially the limits were from 2 to $\infty$, but now we need to change them to $u$ values:
+\begin{itemize}
+	\item when $x = 2$, $u = \ln 2$
+	\item when $x \rightarrow \infty$, $u \rightarrow \infty$
+\end{itemize}
+
+So now the integral looks like this:
+\[
+\int_{\ln 2}^{\infty} \frac{1}{u} du
+\]
+
+And now we can solve the integral using the standard formula $\int \frac{1}{u} du = \ln|u| + C$:
+
+\[
+\int_{\ln 2}^{\infty} \frac{1}{u} du = \ln|u| \Big|_{\ln 2}^{\infty} = \lim_{t \to \infty} [\ln(\ln t) - \ln(\ln 2)] = \infty - \ln(\ln 2) = \infty
+\]
+
+Since the result of the integral is $\infty$ (the integral diverges), that means the series also diverges.
+
+
+\textbf{Question 2.2}
+
+\[
+\sum_{n=0}^{\infty} {(-1)}^n {(\frac{1}{e})}^n
+\]
+
+You can rewrite geometric series as:
+\[
+\sum_{n=0}^{\infty} r^n \hspace{0.5cm}\text{with}\hspace{0.5cm} |r| = -\frac{1}{e}
+\]
+
+A geometric series converges if $|r| < 1$. In this case, $|r| = \frac{1}{e}$, and since $e$ is approximately 2.718, this series converges because $\frac{1}{\text{something larger than 1}}$ is $<$ 1
+
+To know what it converges to, I use the formula $\frac{a}{1 - r}$, where $a$ is the first term of the series.
+
+\begin{itemize}
+	\item $a = 1$
+	\item $r = -\frac{1}{e}$
+\end{itemize}
+
+\[
+\frac{1}{1 - (-\frac{1}{e})} = \frac{1}{1 + \frac{1}{e}} = \frac{1}{\frac{e + 1}{e}} = \frac{e}{e + 1}
+\]
+
+
+
+
+\pagebreak
 \section*{Problem 3}
 
-\begin{enumerate}[(a)]
-	\item answer/solution to this problem
-	\item answer/solution to this problem
-\end{enumerate}
+To answer the following questions, I will look at the limits on both sides
 
-\ldots
+\textbf{Question 1}
+
+\begin{itemize}
+	\item for $x < 0$ we need to look at the first line $\rightarrow$ the limit is 1
+	\item for $x > 0$ we need to look at the second line $\rightarrow$ the limit is 0
+\end{itemize}
+
+So, no, the function can not be defined at $x = 0$ to make it continuous, since the limits on both sides are not equal.
+
+\textbf{Question 2}
+
+\begin{itemize}
+	\item for $x < 1$ we need to look at the second line $\rightarrow$ the limit is 1
+	\item for $x > 1$ we need to look at the third line $\rightarrow$ the limit is $2 - x$, so also 1
+\end{itemize}
+
+So, yes, the function can be defined at $x = 1$ to make it continuous, since the limits on both sides are equal. The value of the function at $x = 1$ will be 1.
+So we set $f(1) = 1$.
+
+\textbf{Question 3}
+
+\begin{itemize}
+	\item for $x < 3$ we need to look at the third line $\rightarrow$ the limit is $2 - x$, so -1
+	\item for $x > 3$ we need to look at the fourth line $\rightarrow$ the limit is $x - 4$ so also -1
+\end{itemize}
+
+So, yes, the function can be defined at $x = 3$ to make it continuous, since the limits on both sides are equal. The value of the function at $x = 3$ will be -1.
+So we set $f(3) = -1$.
+
+
+\pagebreak
+\section*{Problem 4}
+
+\textbf{Question 4.1}
+
+(1) So first and foremost: $\sin^2(x) = {(\sin(x))}^2$, so we can rewrite the function as:
+
+\[
+f(x) \equiv {\sin(\ln(x^2+1))}^2 \\
+\]
+
+Then we just use the chain rule: $\frac{d}{dx} f(g(x))' = f'(g(x)) \cdot g'(x)$ to get:
+
+\[
+f'(x) = 2 \cdot \sin(\ln(x^2+1)) \cdot \cos(\ln(x^2+1)) \cdot \frac{d}{dx}(\ln(x^2+1))
+\]
+
+Now I just need to calculate $\frac{d}{dx}(\ln(x^2+1))$:
+
+\[
+\frac{d}{dx}(\ln(x^2+1)) = \frac{1}{x^2+1} \cdot 2x = \frac{2x}{x^2+1}
+\]
+
+So the final answer is:
+
+\[
+f'(x) = 2 \cdot \sin(\ln(x^2+1)) \cdot \cos(\ln(x^2+1)) \cdot \frac{2x}{x^2+1}
+\]
+
+
+
+\vspace{0.2cm}
+{\centering\rule{1.0\linewidth}{0.4pt}\par}
+\vspace{0.2cm}
+
+
+(2) So here I start with the left part first: $2^{\cos x}$. I will use the rule: $\frac{d}{dx} a^{f(x)} = a^{f(x)} \cdot \ln(a) \cdot f'(x)$. So we get: 
+
+\[
+\frac{d}{dx} 2^{\cos x} = 2^{\cos x} \cdot \ln(2) \cdot (-\sin x) = -\ln(2) \cdot \sin x \cdot 2^{\cos x}
+\]
+
+Then the right part.
+
+$\sqrt{x^3}$ can be rewritten as $x^{3/2}$, so we get $\frac{x^2}{x^{3/2}}$. And this can be rewritten again as $x^{2 - 3/2} = x^{1/2} = \sqrt{x}$. Now we can calculate the derivative:
+
+\[
+\frac{d}{dx} \sqrt{x} = \frac{1}{2\sqrt{x}}
+\]
+
+So all together, we get:
+
+\[
+g'(x) = -\ln(2) \sin x \cdot 2^{\cos x} + \frac{1}{2\sqrt{x}}
+\]
+
+
+
+
+\textbf{Question 4.2}
+
+For these questions, I seperate the function in two parts, calculate the partial derivative of both parts, and then add them together. The centered function is the final answer for that question.
+
+
+(1) $\frac{\partial f}{\partial x}$
+
+I will treat $y$ as a constant, and just differentiate with respect to $x$.
+
+\begin{itemize}
+	\item left side: $x\sin(y)$
+	\item right side: $e^{x+2y}$
+\end{itemize}
+
+\textbf{LEFT}: $\frac{\partial}{\partial x}(x \sin(y))$ = $\sin(y)$
+
+\textbf{RIGHT}: $\frac{\partial}{\partial x}(e^{x+2y})$ = $e^{x+2y} \cdot \frac{\partial}{\partial x}(x+2y)$ = $e^{x+2y} \cdot \frac{\partial}{\partial x}(1+0)$ = $e^{x+2y} \cdot \frac{\partial}{\partial x}(1)$ = $e^{x+2y} \cdot 1$ = $e^{x+2y}$
+
+\[
+\frac{\partial f}{\partial x} = \sin(y) + e^{x+2y}
+\]
+
+
+
+
+(2) $\frac{\partial f}{\partial y}$
+
+Here I will treat $x$ as a constant, and just differentiate with respect to $y$.
+
+
+\textbf{LEFT}: since $x$ is constant, 
+
+$\frac{\partial}{\partial x}(x\sin(y))$ = $x \cdot \frac{\partial}{\partial y}(\sin(y))$ = $x \cdot \cos(y)$
+
+\textbf{RIGHT}: for the right side we just the chain rule again
+
+$\frac{\partial}{\partial x}(e^{x+2y})$ = $e^{x+2y} \cdot \frac{\partial}{\partial y}(x+2y)$ = $e^{x+2y} \cdot \frac{\partial}{\partial y}(0+2)$ = $e^{x+2y} \cdot \frac{\partial}{\partial y}(2)$ = $e^{x+2y} \cdot 0 + e^{x+2y} \cdot 1$ = $2e^{x+2y}$
+
+
+\[
+\frac{\partial f}{\partial y} = x \cos(y) + 2e^{x+2y}
+\]
+
+
+\pagebreak
+(3) $\frac{\partial^2 f}{\partial x \partial y}$
+
+For this one I will just take what we found in (2) and differentiate it with respect to $x$.
+
+\textbf{LEFT}:
+
+$\frac{\partial}{\partial x}(x \cos(y))$ = $\cos(y)$
+
+
+\textbf{RIGHT}:
+
+$\frac{\partial}{\partial x}(2e^{x+2y})$ = $2e^{x+2y} \cdot \frac{\partial}{\partial x}(x+2y)$ = $2e^{x+2y} \cdot \frac{\partial}{\partial x}(1+0)$ = $2e^{x+2y} \cdot \frac{\partial}{\partial x}(1)$ = $2e^{x+2y} \cdot 1$ = $2e^{x+2y}$
+
+\[
+\frac{\partial^2 f}{\partial x \partial y} = \cos(y) + 2e^{x+2y}
+\]
+
+
+
+(4) $\frac{\partial^2 f}{\partial x^2}$
+
+For this one I will just take what we found in (1) and differentiate it with respect to $x$ again.
+
+\textbf{LEFT}: this will just be 0, since $y$ is constant
+
+$\frac{\partial}{\partial x}(\sin(y))$ = $\frac{\partial}{\partial x}(\sin(0))$ = $\frac{\partial}{\partial x}(0)$ = $0$
+
+\textbf{RIGHT}:
+
+$\frac{\partial}{\partial x}(e^{x+2y})$ = $e^{x+2y} \cdot \frac{\partial}{\partial x}(x+2y)$ = $e^{x+2y} \cdot \frac{\partial}{\partial x}(1+0)$ = $e^{x+2y} \cdot \frac{\partial}{\partial x}(1)$ = $e^{x+2y} \cdot 1$ = $e^{x+2y}$
+
+\[
+\frac{\partial^2 f}{\partial x^2} = 0 + e^{x+2y} = e^{x+2y}
+\]
+
+
+
+
+(5) $\frac{\partial^2 f}{\partial y \partial x}$
+
+For this one I will just take what we found in (1) and differentiate it with respect to $y$.
+
+\textbf{LEFT}:
+
+$\frac{\partial}{\partial y}(\sin(y))$ = $\cos(y)$
+
+\textbf{RIGHT}:
+
+$\frac{\partial}{\partial y}(e^{x+2y})$ = $e^{x+2y} \cdot \frac{\partial}{\partial y}(x+2y)$ = $e^{x+2y} \cdot \frac{\partial}{\partial y}(0+2)$ = $e^{x+2y} \cdot \frac{\partial}{\partial y}(2)$ = $e^{x+2y} \cdot 0 + e^{x+2y} \cdot 1$ = $2e^{x+2y}$
+
+\[
+\frac{\partial^2 f}{\partial y \partial x} = \cos(y) + 2e^{x+2y}
+\]
+
+
+
+
+
+
+
+\pagebreak
+\section*{Problem 5}
+
+% $f(x) = \frac{x^2}{x^2 - x - 2}$
+
+\textbf{the domain}
+
+The domain of a function is the set of all possible input values (x-values) that will produce a valid output for the function.
+
+Because this function is a fraction, and since division by zero is undefined, we just need to find the values of $x$ that make the denominator equal to zero, and exclude those from the domain.
+
+We need to solve the equation $x^2 - x - 2 = 0$. I factor this to $(x - 2)(x + 1) = 0$, and this means the solutions of the equations are $x = 2$ and $x = -1$. So now we just write the domain, which is all real numbers except 2 and -1:
+
+\[
+(-\infty, -1) \cup (-1, 2) \cup (2, \infty)
+\]
+
+\textbf{the zeroes (also called roots)}
+
+So here we have to do the opposite. We now need to find the values of $x$ that make the whole function equal to zero.
+
+Because this function is a fraction, the result will be 0 if the numerator is 0 (as long as the denominator is not also 0).
+
+We need to solve the equation $x^2 = 0$. The only solution to this equation is $x = 0$. So now we need to make sure the denominator is not also 0 at this point. If we fill in 0 in the denominator, we get $0^2 - 0 - 2 = -2$, which is not 0. So this function has 1 zero at:
+\[
+x = 0
+\]
+
+\textbf{the horizontal and vertical asymptotes}
+
+% Vertical asymptotes occur where a rational function's denominator is zero (and the numerator is not zero at that point). We already found these points when we calculated the domain. So this function has vertical asymptotes at:
+
+For this I looked at the graph (next page), and I can see that there are 2 vertical asymptotes and 1 horizontal asymptote.
+
+\begin{itemize}
+	\item Vertical: $x = -1$ and $x = 2$
+	\item Horizontal: $y = 1$
+\end{itemize}
+
+
+% \[
+% x = -1 \text{ and } x = 2
+% \]
+
+% \[
+% y = 1
+% \]
+
+
+% To find horizontal asymptotes, we need to look at the degrees of the polynomial in the numerator and the denominator.
+% \begin{itemize}
+% 	\item If the degree of the numerator is less than the degree of the denominator, then the horizontal asymptote is $y = 0$.
+% 	\item If the degree of the numerator is equal to the degree of the denominator, then the horizontal asymptote is $y = \frac{a}{b}$, where $a$ is the leading coefficient of the numerator and $b$ is the leading coefficient of the denominator.
+% 	\item If the degree of the numerator is greater than the degree of the denominator, then there is no horizontal asymptote (but there might be an oblique asymptote).
+% \end{itemize}
+
+% In this case, the degree of the numerator (2) is equal to the degree of the denominator (2), and both leading coefficients are 1. So this function has a horizontal asymptote at:
+% \[
+% y = \frac{1}{1} = 1
+% \]
+
+\textbf{the extreme values}
+
+
+
+\pagebreak
+\textbf{graph}
+
+\[
+	f(x) = \frac{x^2}{x^2-x-2}
+\]
+
+Every line is 2 units apart. So for example, for the vertical assymptotes, you can see them at $x = -1$ and $x = 2$. And for the horizontal assymptote you can see it at $y = 1$
+
+
+\begin{center}
+	\includegraphics[width=0.8\textwidth]{desmos-graph.png}
+\end{center}
+
+
+\pagebreak
+\section*{Problem 6}
+
+% integrals
+
+(1)
+
+\[
+\int_{1}^{2}(\frac{2+3x^2}{x}dx)
+\]
+
+First I split the function in two parts
+
+\[
+\int_{1}^{2}(\frac{2}{x})dx + \int_{1}^{2}(3x) dx
+\]
+
+And now solve both parts:
+\[
+\int_{1}^{2}(\frac{2}{x} dx) = 2 \ln|x| \Big|_{1}^{2} = 2\ln(2) - 2\ln(1) = 2\ln(2) - 0 = 2\ln(2)
+\]
+
+\[
+\int_{1}^{2}(3x) dx = \frac{3x^2}{2} \Big|_{1}^{2} = \frac{3(2^2)}{2} - \frac{3(1^2)}{2} = \frac{3(4)}{2} - \frac{3(1)}{2} = \frac{12}{2} - \frac{3}{2} = \frac{9}{2}
+\]
+
+So together
+
+\[
+2 \ln(2) + \frac{9}{2}
+\]
+
+(b)
+
+\[
+\int x \cdot e^x dx
+\]
+
+The formula for integration by parts is: $\int u dv = uv - \int v du$. So I need to choose $u$ and $dv$. I choose:
+
+\begin{itemize}
+	\item $u = x \rightarrow du = dx$
+	\item $dv = e^x dx \rightarrow v = e^x$
+\end{itemize}
+
+Then I fill in the formula:
+\[
+\int x  e^x dx = x  e^x - \int e^x dx
+\]
+
+The integral of $e^x$ is just $e^x$, so we get (and add the constante $C$):
+
+\[
+= x  e^x - e^x + C
+\]
+
+
+
+
 \end{document}  
