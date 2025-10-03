@@ -13,3 +13,7 @@
 # Don't these files specifically
 !README.md
 !.gitignore
+
+# and just stuff I prefer to keep track of
+!*.png
+!*.md
