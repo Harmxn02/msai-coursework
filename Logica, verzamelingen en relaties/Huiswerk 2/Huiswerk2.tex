@@ -5,6 +5,8 @@
 \usepackage{amsmath}
 \usepackage{enumerate}
 
+\usepackage{charter}
+
 \title{Huiswerk 2 \\ IB0402 Logica, verzamelingen en relaties}
 \author{Harman Singh}
 \date{Month Day, Year}
@@ -13,11 +15,91 @@
 \maketitle
 
 \pagebreak
-\section*{Problem 1}
+\section*{Opgave 4}
+\textbf{A}
+
+$M$ = miauwen
+
+$x$ = een katje
+
+\[
+\forall x M(x)
+\]
+
+vertaling: Voor alle $x$, $x$ miauwt
+
+
+\textbf{B}
+
+$S$ = scheefhangen 
+
+$x$ = een gordijn
+
+\[
+\exists x S(x)
+\]
+
+vertaling: Er bestaat een $x$ zodat $x$ scheefhangt
 
 
 
+\pagebreak
+\section*{Opgave 5}
 
+\textbf{A}
+
+Eerst herschrijf ik de implicatie van form $A \rightarrow B$ naar $\neg A \lor B$:
+
+\[
+\forall x P(x) \rightarrow Q(y) \equiv \neg ( \forall x P(x)) \lor Q(y)
+\]
+
+Hierna herschrijf ik het linkerdeel met behulp van de kwantorregel (als niet alle $x$ aan $P(x)$ voldoen, dan is er een $x$ die niet aan $P(x)$ voldoet):
+
+\[
+\neg ( \forall x P(x)) \equiv \exists x \neg P(x)
+\]
+
+En dan heb je de prenex normaalvorm:
+
+\[
+\exists x ( \neg P(x) \lor Q(y) )
+\]
+
+
+\textbf{B}
+
+Hier kan ik voor de eerste paar stappen dezelfde regels gebruiken als in deel A.
+
+Dus eerste de implicatie van form $A \rightarrow B$ herschrijven naar $\neg A \lor B$:
+
+\[
+\forall x P(x) \rightarrow Q(x) \equiv \neg ( \forall x P(x)) \lor Q(x)
+\]
+
+En dan het linkerdeel herschrijven met behulp van de kwantorregel:
+
+\[
+\neg ( \forall x P(x)) \equiv \exists x \neg P(x)
+\]
+
+Dan krijg je:
+
+\[
+\exists x ( \neg P(x) \lor Q(x) )
+\]
+Maar hier kan ik de variabele $x$ niet opnieuw gebruiken, omdat die al gebonden is aan de kwantor $\exists x$.
+Dus ik hernoem ($\alpha$-renaming) de variabele $x$ in $z$ in het linkerdeel om te bekomen aan de prenex normaalvorm:
+\[
+\exists z ( \neg P(z) \lor Q(x) )
+\]
+
+
+
+\pagebreak
+\section*{Opgave 6}
 
 \ldots
+
+
 \end{document}
