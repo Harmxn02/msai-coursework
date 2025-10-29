@@ -13,10 +13,55 @@
 \maketitle
 
 \pagebreak
-\section*{Problem 1}
+\section*{Opgave 7}
+
+\textbf{A}
+
+Aangezien een machtsverzameling $2^n$ elementen bevat, en B 3 elementen bevat, zal $\mathcal{P(B)}$ dus $2^3 = 8$ elementen bevatten.
+
+Namelijk:
+
+\begin{itemize}
+	\item $\emptyset$ \hfill(lege verzameling)
+	\item $\{a\}$ \hfill(het 1e element)
+	\item $\{\{b,a\}\}$ \hfill(het 2e element)
+	\item $\{b\}$ \hfill(het 3e element)
+	\item $\{a,b\}$ \hfill(2e en 3e element)
+	\item $\{a,\{b,a\}\}$ \hfill(1e en 2e element)
+	\item $\{\{b,a\},b\}$ \hfill(2e en 3e element)
+	\item $\{a, \{b,a\},b\}$ \hfill(de hele verzameling)
+\end{itemize}
+
+\[
+\boxed{\mathcal{P(B)} = \{\emptyset, \{a\}, \{\{b,a\}\}, \{b\}, \{a,b\}, \{a,\{b,a\}\}, \{\{b,a\},b\}, \{a, \{b,a\},b\}\}}
+\]
+
+
+\textbf{B}
+
+Nu dat we $\mathcal{P(B)}$ kennen, moeten we voor $A \cap \mathcal{P(B)}$ enkel de elementen overhouden die in beide verzamelingen voorkomen.
+
+En dat is enkel: $\{a,b\}$
+
+\[\boxed{A \cap \mathcal{P(B)} = \{a,b\}}\]
+
+\textbf{C}
+
+Eerst zoek in naar alle verzamelingen in B, en dat is enkel $\{b,a\}$. Dan moet ik kijken of alle elementen van $\{b,a\}$ ook in A zitten. Dat is niet het geval, dus het antwoord is een lege verzameling: $\emptyset$.
+
+\[\boxed{B \cap \mathcal{P}(A) = \emptyset} \]
 
 
 
+\pagebreak
+\section*{Opgave 8}
+\ldots
+
+\section*{Opgave 9}
+\ldots
+
+\section*{Opgave 10}
+\ldots
 
 
 \ldots
