@@ -5,6 +5,8 @@
 \usepackage{amsmath}
 \usepackage{enumerate}
 
+\usepackage{charter}
+
 \title{Huiswerk 3 \\ IB0402 Logica, verzamelingen en relaties}
 \author{Harman Singh}
 \date{Month Day, Year}
@@ -55,13 +57,83 @@ Eerst zoek in naar alle verzamelingen in B, en dat is enkel $\{b,a\}$. Dan moet 
 
 \pagebreak
 \section*{Opgave 8}
-\ldots
+
+1. Eerst gebruik ik De Morgan op het eerst complement: $(A \cap B) \cup B = ()$
+
+\[
+{((B \cap A^c) \cup {B}^c)}^c = {(B \cap A^c)}^c \cap {(B^c)}^c
+\]
+
+En ${(B^c)}^c = (B)$ dus dan wordt het:
+
+\[
+{((B \cap A^c) \cup {B}^c)}^c = {(B \cap A^c)}^c \cap B
+\]
+
+2. Dan gebruik ik nog eens De Morgan op het linkerdeel:
+
+% (B∩Ac)c=Bc∪(Ac)c=Bc∪A.
+\[
+{(B \cap A^c)}^c  = B^c \cup {(A^c)}^c = B^c \cup A
+\]
+
+En dan krijg je samen:
+
+\[
+(B^c \cup A) \cap B
+\]
+
+3. Dan gebruik ik distributiviteit:
+
+\[
+(B^c \cup A) \cap B = (B^c \cap B) \cup (A \cap B)
+\]
+
+
+Het linkerdeel is een lege verzameling omdat de doorsnede van $B$ met hetgene wat niet in $B$ zit niets kan zijn.
+
+Dus het antwoord is:
+
+\[
+	\emptyset \cup (A \cap B) = \boxed{(A \cap B)}
+\]
+
+
+
+
 
 \section*{Opgave 9}
 \ldots
 
+\pagebreak
 \section*{Opgave 10}
-\ldots
+
+Ik zal twee situaties inbeelden. Eentje waar $x$ gelijk is aan 1 en $y$ gelijk is aan 0, en een andere waar $x$ gelijk is aan 0 en $y$ gelijk is aan 1.
+
+\subsection*{Situatie 1}
+
+\begin{itemize}
+	\item Het $\boxed{OF}$ blok zal 1 outputten, omdat 1 van de 2 inputs 1 is.
+	\item Het $\boxed{EN}$ blok zal 0 outputten, omdat niet beide inputs 1 zijn.
+	\item Het $\boxed{NIET}$ blok zal het tegenovergestelde van het $\boxed{EN}$ blok outputten, dus 1.
+	\item Het rechtste $\boxed{EN}$ blok zal 1 outputten, omdat beide inputs (de $\boxed{OF}$ en $\boxed{NIET}$ blokken) 1 zijn. 
+\end{itemize}
+
+Dus hier heeft de schakeling het gewenst effect.
+
+\subsection*{Situatie 2}
+
+Het zal hetzelfde zijn als situatie 1, maar met de waarden van $x$ en $y$ omgedraaid.
+
+\begin{center}
+	\includegraphics[width=0.8\textwidth]{kleuren.png}
+\end{center}
+
+Hierboven heb ik de schakeling ingekleurd om het visueel te laten zien.
+
+Groen is een 1, rood is een 0.
+
+
 
 
 \ldots
