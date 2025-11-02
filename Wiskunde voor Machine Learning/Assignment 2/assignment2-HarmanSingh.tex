@@ -13,26 +13,180 @@
 \maketitle
 
 \pagebreak
+\pagebreak
 \section*{Problem 1}
 
-\begin{enumerate}[(a)]
-	\item answer/solution to this problem
-	\item answer/solution to this problem
-\end{enumerate}
+\subsection*{exercise a}
 
+$Av = \Lambda v$
+
+First I am going to multiply $A$ to the first column of $Q$
+
+So $v_1 = {[-a, 0, b]}^T$ with eigenvalue 25.
+
+This gets me the equation:
+
+\[
+A \begin{pmatrix}
+	-a \\
+	0 \\
+	b
+\end{pmatrix} = 25 \begin{pmatrix}
+	-a \\
+	0 \\
+	b
+\end{pmatrix}
+\]
+
+Now I calculate $Av_1$ = 
+
+\[
+Av_1 = 
+\begin{pmatrix}
+ -2 & 0 & -36 \\
+ 0 & -3 & 0 \\
+ -36 & 0 & -23	
+\end{pmatrix} \begin{pmatrix}
+	-a \\
+	0 \\
+	b
+\end{pmatrix}
+\]
+
+Now we multiply horizontally on the left, with vertically on the right. So for example the element on the top left will be $(-2)(-a)$ and then $0(0)$ and then $-36(b)$ and so on.
+
+\[
+\begin{pmatrix}
+	(-2)(-a) & + 0(0) & + (-36)(b) \\
+	0(-a) & + (-3)(0) & + 0(b) \\
+	(-36)(-a) & + 0(0) & + (-23)(b)
+\end{pmatrix} = 
+\begin{pmatrix}
+	2a - 36b \\
+	0 \\
+	36a - 23b
+\end{pmatrix}
+\]
+
+Now I equate this to $25v_1$:
+
+\[
+\begin{pmatrix}
+	2a - 36b \\
+	0 \\
+	36a - 23b
+\end{pmatrix} = 25 \begin{pmatrix}
+	-a \\
+	0 \\
+	b
+\end{pmatrix} = \begin{pmatrix}
+	25a \\
+	0 \\
+	25b
+\end{pmatrix}
+\]
+
+And now I can just solve the equations for $a$ and $b$:
+
+\[
+-2a - 36b = -25a \implies 27a - 36b = 0 \implies 27a = 36b \implies b = \frac{27}{36}a = \frac{3}{4}a
+\]
+
+\[
+36a - 23b = 25b \implies 36a - 48b = 0 \implies 36a = 48b \implies b = \frac{36}{48}a = \frac{3}{4}a
+\]
+
+Since $Q$ orthogonally diagonalizes $A$, the following must be true
+\[
+	{(-a)}^2 + {(0)}^2 + {(b)}^2 = 1 \implies a^2 + b^2 = 1
+\]
+
+I can enter the value of $b$ I found above into this equation so we get:
+
+\[
+a^2 + {\left(\frac{3}{4}a\right)}^2 = 1 \implies a^2 + \frac{9}{16}a^2 = 1 \implies \frac{25}{16}a^2 = 1 \implies a^2 = \frac{16}{25} \implies a = \frac{4}{5}
+\]
+
+Then enter this value of $a$ into the equation for $b$:
+
+\[b = \frac{3}{4}a =  \frac{3}{4} \cdot \frac{4}{5} = \frac{12}{20} = \frac{3}{5}\]
+
+
+\[
+\boxed{a = \frac{4}{5}, b = \frac{3}{5}}
+\]
+
+
+
+\subsection*{exercise b}
+\ldots
+
+\subsection*{exercise c}
+\ldots
+
+\subsection*{exercise d}
+\ldots
+
+\subsection*{exercise e}
+\ldots
+
+
+
+
+\pagebreak
 \section*{Problem 2}
 
-\begin{enumerate}[(a)]
-	\item answer/solution to this problem
-	\item answer/solution to this problem
-\end{enumerate}
+\subsection*{exercise a}
+\ldots
 
+\subsection*{exercise b}
+\ldots
+
+\subsection*{exercise c}
+\ldots
+
+\subsection*{exercise d}
+\ldots
+
+\subsection*{exercise e}
+\ldots
+
+
+
+
+\pagebreak
 \section*{Problem 3}
 
-\begin{enumerate}[(a)]
-	\item answer/solution to this problem
-	\item answer/solution to this problem
-\end{enumerate}
+% \begin{enumerate}[(a)]
+% 	\item answer/solution to this problem
+% 	\item answer/solution to this problem
+% \end{enumerate}
+
+
+\subsection*{exercise a}
+\ldots
+
+\subsection*{exercise b}
+\ldots
+
+
+
+
+\pagebreak
+\section*{Problem 4}
+\subsection*{exercise a}
+\ldots
+
+\subsection*{exercise b}
+\ldots
+
+
+\pagebreak
+\section*{Problem 5}
+\ldots
+
+
+
 
 \ldots
 \end{document}  
