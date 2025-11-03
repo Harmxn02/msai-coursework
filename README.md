@@ -10,6 +10,16 @@ This repository contains exercises and assignments made with LaTeX during the pu
 -   Every folder corresponds to a course.
 -   Inside each folder, you'll find subfolders for exercises and assignments.
 
+### Commit messages
+
+-   I use the `(partial)` prefix if the work is still in progress.
+-   I use the `(template)` prefix if I have added the source files, but have not started the assignment yet.
+-   I use the `(fix)` prefix if I made corrections
+
+When an assignment is completed, I make a final commit without any of these prefixes. So ideally, after a course has been completed, each entry for that course should just be the name of the course and the assignment number.
+
+e.g. `Wiskunde voor Machine Learning - Assignment 1`
+
 ## Courses
 
 ### Premaster (bridging programme)
