@@ -113,7 +113,69 @@ Het linkerdeel is een lege verzameling (complementregels)
 
 
 \section*{Opgave 9}
+
+
+\subsection*{oefening a}
+
 \ldots
+
+
+\subsection*{oefening b}
+\ldots
+
+
+\pagebreak
+\subsection*{oefening c}
+
+1. Eerst gebruik ik de distributiviteit wet op het deel rechts van de $\sqcup$:
+
+% ik zie a in de formule als \bar{z}
+% ik zie b \sqcap c in de formule als z \sqcup y
+
+\[
+((z \sqcup y) \sqcap \bar{z}) \equiv (z \sqcap \bar{z}) \sqcup (y \sqcap \bar{z})
+\]
+
+2. Ik kan nu $(z \sqcap z)$ vervangen met 0 (complement)
+
+\[
+((z \sqcup y) \sqcap \bar{z}) \equiv 0 \sqcup (y \sqcap \bar{z})
+\]
+
+3. Dan de 0-eigenschap ($a \sqcup 0 = a$)
+
+\[
+((z \sqcup y) \sqcap \bar{z}) \equiv (y \sqcap \bar{z})
+\]
+
+\textbf{We subtitueren dit terug in de originele formule:}
+
+\[
+(x \sqcap y) \sqcup ((z \sqcup y) \sqcap \bar{z}) \sqcup y \equiv (x \sqcap y) \sqcup (y \sqcap \bar{z} ) \sqcup y
+\]
+
+4. Nu gebruik ik absorptie aan de rechterkant:
+
+\[
+(y \sqcap \bar{z}) \sqcup y \equiv y
+\]
+
+\textbf{We substitueren dit terug in de formule:}
+
+\[
+(x \sqcap y) \sqcup (y \sqcap \bar{z} ) \sqcup y \equiv (x \sqcap y) \sqcup y
+\]
+
+5. En dan kan ik nog eens absorptie gebruiken:
+
+\[
+(x \sqcap y) \sqcup y \equiv y
+\]
+
+\[
+\boxed{(x \sqcap y) \sqcup ((z \sqcup y) \sqcap \bar{z}) \sqcup y \equiv y}
+\]
+
 
 \pagebreak
 \section*{Opgave 10}
