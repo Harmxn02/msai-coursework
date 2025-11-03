@@ -58,21 +58,23 @@ Eerst zoek in naar alle verzamelingen in B, en dat is enkel $\{b,a\}$. Dan moet 
 \pagebreak
 \section*{Opgave 8}
 
-1. Eerst gebruik ik De Morgan op het eerst complement: $(A \cap B) \cup B = ()$
+1. Eerst gebruik ik De Morgan op het linkerdeel
+
+In de formula van De Morgan uit het formuleblad, zie ik $(B \cap A^c)$ als $A$ en $\cup B^c$ als $B$
+
 
 \[
 {((B \cap A^c) \cup {B}^c)}^c = {(B \cap A^c)}^c \cap {(B^c)}^c
 \]
 
-En ${(B^c)}^c = (B)$ dus dan wordt het:
+En ${(B^c)}^c = B$ (dubbel complement)  dus dan wordt het:
 
 \[
-{((B \cap A^c) \cup {B}^c)}^c = {(B \cap A^c)}^c \cap B
+{((B \cap A^c) \cap {B}^c)}^c = {(B \cap A^c)}^c \cap B
 \]
 
-2. Dan gebruik ik nog eens De Morgan op het linkerdeel:
+2. Dan gebruik ik nog eens De Morgan op het linkerdeel, en dubbel complement op ${(A^c)}^c$:
 
-% (B∩Ac)c=Bc∪(Ac)c=Bc∪A.
 \[
 {(B \cap A^c)}^c  = B^c \cup {(A^c)}^c = B^c \cup A
 \]
@@ -83,16 +85,24 @@ En dan krijg je samen:
 (B^c \cup A) \cap B
 \]
 
-3. Dan gebruik ik distributiviteit:
+3. Eerst gebruik ik commutativiteit zoals de formule lijkt zoals op zoals op het formuleblad:
 
 \[
-(B^c \cup A) \cap B = (B^c \cap B) \cup (A \cap B)
+(B^c \cup A) \cap B = B \cap (B^c \cup A)
+\]
+
+4. Dan gebruik ik distributiviteit:
+
+$(A \cap B) \cup (A \cap C)$ (de formule van distributiviteit) is dan:
+
+\[
+B \cap (B^c \cup A) = (B \cap B^c) \cup (B \cap A)
 \]
 
 
-Het linkerdeel is een lege verzameling omdat de doorsnede van $B$ met hetgene wat niet in $B$ zit niets kan zijn.
+Het linkerdeel is een lege verzameling (complementregels)
 
-Dus het antwoord is:
+5. Een lege verzameling in unie met een verzameling is gewoon die verzameling (nulelement):
 
 \[
 	\emptyset \cup (A \cap B) = \boxed{(A \cap B)}
