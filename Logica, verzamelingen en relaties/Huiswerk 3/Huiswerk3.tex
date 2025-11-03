@@ -58,60 +58,54 @@ Eerst zoek in naar alle verzamelingen in B, en dat is enkel $\{b,a\}$. Dan moet 
 \pagebreak
 \section*{Opgave 8}
 
-1. Eerst gebruik ik De Morgan op het linkerdeel
-
-In de formula van De Morgan uit het formuleblad, zie ik $(B \cap A^c)$ als $A$ en $\cup B^c$ als $B$
-
-
 \[
-{((B \cap A^c) \cup {B}^c)}^c = {(B \cap A^c)}^c \cap {(B^c)}^c
+{((B \cap {A}^c) \cup {B}^c)}^c \cap {(A \cup B)}^c
 \]
 
-En ${(B^c)}^c = B$ (dubbel complement)  dus dan wordt het:
+1. Ik zal eerst De Morgan toepassen op het deel binnen de haakjes links. Ik zie $(B \cap A^c)$ als A in de formule van De Morgan.
 
 \[
-{((B \cap A^c) \cap {B}^c)}^c = {(B \cap A^c)}^c \cap B
+((B \cap {A}^c) \cup {B}^c) \equiv (  {(B \cap A^c)}^c \cap {(B^c)}^c   )
 \]
 
-2. Dan gebruik ik nog eens De Morgan op het linkerdeel, en dubbel complement op ${(A^c)}^c$:
+2. Hierop kan ik nog eens De Morgan toepassen
 
 \[
-{(B \cap A^c)}^c  = B^c \cup {(A^c)}^c = B^c \cup A
+(  {(B \cap A^c)}^c \cap {(B^c)}^c   )  \equiv (B^c \cap {(A^c)}^c) \cap {(B^c)}^c
 \]
 
-En dan krijg je samen:
+3. Hierop pas ik twee keer de `dubbel complement'-regel toe (${(A^c)}^c = A$):
 
 \[
-(B^c \cup A) \cap B
+(B^c \cap {(A^c)}^c) \cap {(B^c)}^c \equiv ((B^c \cap A) \cap B)
 \]
 
-3. Eerst gebruik ik commutativiteit zoals de formule lijkt zoals op zoals op het formuleblad:
+4. Nu gebruik ik de associativiteitswet ($A \cap (B \cap C) = (A \cap B) \cap C$):
 
 \[
-(B^c \cup A) \cap B = B \cap (B^c \cup A)
+((B^c \cap A) \cap B)	\equiv	(B^c \cap B) \cap A
 \]
 
-4. Dan gebruik ik distributiviteit:
-
-$(A \cap B) \cup (A \cap C)$ (de formule van distributiviteit) is dan:
+5. Op het linkerdeel pas ik complementregel toe ($A \cap A^c = \emptyset$), en dan nulelement
 
 \[
-B \cap (B^c \cup A) = (B \cap B^c) \cup (B \cap A)
+(B^c \cap B) \cap A 	\equiv		\emptyset \cap A 	\equiv \emptyset
 \]
 
-
-Het linkerdeel is een lege verzameling (complementregels)
-
-5. Een lege verzameling in unie met een verzameling is gewoon die verzameling (nulelement):
+\textbf{Het gehele linkerdeel is dus gewoon een lege verzameling. Ik substitueer dit in de oorspronkelijk formule}
 
 \[
-	\emptyset \cup (A \cap B) = \boxed{(A \cap B)}
+{((B \cap {A}^c) \cup {B}^c)}^c \cap {(A \cup B)}^c \equiv \emptyset \cap {(A \cup B)}^c
+\]
+
+6. Nu kan ik gewoon nog eens de nulelement wet toepassen:
+
+\[
+\emptyset \cap {(A \cup B)}^c \equiv \boxed{\emptyset}
 \]
 
 
-
-
-
+\pagebreak
 \section*{Opgave 9}
 
 
