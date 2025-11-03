@@ -17,19 +17,60 @@
 \pagebreak
 \section*{Opgave 16}
 \subsection*{oefening a}
-\ldots
+
+% Aangezien de verzameling $V$ enkel natuurlijke getallen bevat, moeten we om de elementen ($x$) ervan te bepalen, gewoon kijken voor welke waarden van $x$ de definities resulteren in natuurlijke getallen.
+
+% Dus we moeten voor de getallen 0 $\rightarrow \infty$ kijken of ze, wanneer ingevuld in de formule $3x/2$, resulteren in een natuurlijk getal.
+
+% \begin{itemize}
+% 	\item voor \textbf{1} is de formule: $3(1)/2$ = 1.5, wat geen natuurlijk getal is, dus $1 \notin V$
+% 	\item voor \textbf{2} is de formule: $3(2)/2$ = 3, wat wel een natuurlijk getal is, dus $2 \in V$
+% 	\item voor \textbf{3} is de formule: $3(3)/2$ = 4.5, wat geen natuurlijk getal is, dus $3 \notin V$
+% 	\item voor \textbf{4} is de formule: $3(4)/2$ = 6, wat wel een natuurlijk getal is, dus $4 \in V$
+% 	\item voor \textbf{5} is de formule: $3(5)/2$ = 7.5, wat geen natuurlijk getal is, dus $5 \notin V$
+% 	\item voor \textbf{6} is de formule: $3(6)/2$ = 9, wat wel een natuurlijk getal is, dus $6 \in V$
+% \end{itemize}
+
+% Hieruit kan ik afleiden dat even getallen wel in de verzameling zitten, dus de eerste 5 elementen van $V$ zijn: \boxed{2, 4, 6, 8, 10}
+
+
+Het eerste element zal 64 zijn (gegeven). Hierna bereken ik recursief $\frac{3x}{2}$ om de volgende elementen te bepalen.
+
+\begin{itemize}
+	\item \textbf{1e element}: 64
+	\item \textbf{2e element, met $x = 64$}: $\frac{3\cdot(64)}{2}$ = $96$
+	\item \textbf{3e element, met $x = 96$}: $\frac{3\cdot(96)}{2}$ = $144$
+	\item \textbf{4e element, met $x = 144$}: $\frac{3\cdot(144)}{2}$ = $216$
+	\item \textbf{5e element, met $x = 216$}: $\frac{3\cdot(216)}{2}$ = $324$
+\end{itemize}
+
+De eerste 5 elementen van de verzameling $V$ zijn: $\boxed{64, 96, 144, 216, 324}$
 
 
 \subsection*{oefening b}
-\ldots
+Als we de berekening $\frac{3x}{2}$ nog een paar keer doen, dan komen we op het volgende:
+
+\begin{itemize}
+	\item \textbf{6e element, met $x = 324$}: $\frac{3\cdot(324)}{2}$ = $486$
+	\item \textbf{7e element, met $x = 486$}: $\frac{3\cdot(486)}{2}$ = $729$
+	\item \textbf{8e element, met $x = 729$}: $\frac{3\cdot(729)}{2}$ = $1093.5$, wat geen natuurlijk getal is.
+\end{itemize}
+
+
+Hierop volgende bewerkingen, van de vorm $3x/2$ zullen ook niet in natuurlijke getallen resulteren.
 
 
 \subsection*{oefening c}
-\ldots
+
+Dit is een meetkundige rij, omdat er een verhouding van $\frac{3}{2}$ is. Elk volgend element is $\frac{3}{2}$ groter dan het vorige
+\[r = \frac{3}{2}\]
 
 
 \subsection*{oefening d}
-\ldots
+
+$S_7$ = $64 \cdot \frac{1 - {(3/2)}^7}{1 - (3/2)} = 64 \cdot \frac{1 - 17.0859}{-\frac{1}{2}} = 64 \cdot \frac{-16.0859}{-\frac{1}{2}} = 64 \cdot \frac{16.0859}{\frac{1}{2}} = 64 \cdot (16.0859 \cdot 2) = 2059$ 
+
+En door alle elementen manueel op te tellen: $64 + 96 + 144 + 216 + 324 + 486 + 729 = 2059$
 
 
 
