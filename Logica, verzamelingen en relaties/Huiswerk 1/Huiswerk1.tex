@@ -1,32 +1,24 @@
-\documentclass[a4paper, 12pt]{article}
-
-% Packages
-\usepackage[utf8]{inputenc}
-\usepackage{amsmath, amssymb, amsthm}
+\documentclass[11pt, a4paper]{article}
+\usepackage{geometry}
+\usepackage[parfill]{parskip}
 \usepackage{graphicx}
-\usepackage{hyperref}
-\usepackage[margin=2.5cm]{geometry}
+\usepackage{amsmath}
+\usepackage{enumerate}
+
+\usepackage{charter}
 
 % Document information
-\title{Logica, verzamelingen en relaties \textemdash{} Huiswerk 1}
-\author{Harman Preet Singh}
+\title{Huiswerk 1 \\ IB0402 Logica, verzamelingen en relaties}
+\author{Harman Singh}
 
-% Custom theorem environments
-\newtheorem{theorem}{Theorem}
-\newtheorem{lemma}[theorem]{Lemma}
-\newtheorem{proposition}[theorem]{Proposition}
-\newtheorem{corollary}[theorem]{Corollary}
-\newtheorem{definition}{Definition}
-\newtheorem{example}{Example}
 
 \begin{document}
+\maketitle
 % chktex-file 44
 
-\maketitle
-% \tableofcontents
-
-\section{Opgave 1}
-\textbf{A}
+\pagebreak
+\section*{Opgave 1}
+\subsection*{A}
 
 \[
 \begin{tabular}{|c|c|c|c|c|}
@@ -43,29 +35,22 @@
 
 In alle vier gevallen is $\phi$ waar, dus het is een tautologie.
 
-\vspace{2cm}
 
-\noindent\textbf{B}
+\subsection*{B}
 
-Ik gebruik eerst de standaardequivalentie $q \rightarrow p$ = $\neg q \lor p$. Dus:
+\[
+\neg p \lor (q \rightarrow p)
+\]
 
-\begin{center}
-	$\phi$ = $\neg p \lor (q \rightarrow p)$ = $\neg p \lor (\neg q \lor p)$ \\
-\end{center}
+$\equiv \neg p \lor (\neg q \lor p)$ \hfill ($\rightarrow$-eliminatie)
 
-Dan verander ik de haakjes en de volgorde van de termen (mag door de commutatieve en associatieve wetten voor $\lor$):
-\begin{center}
-	$\phi$ = $(\neg p \lor p) \lor \neg q$ \\
-\end{center}
+$\equiv \neg p \lor (p \lor \neg q )$ \hfill (commutativiteit)
 
-En dan pas ik de wet van uitgesloten derde toe op ($\neg p \lor p$). Dus ($\neg p \lor p$) schrijf ik als $(T)$ (tautologie):
-\begin{center}
-	$\phi$ = $(T) \lor \neg q$ = $T$ \\
-\end{center}
+$\equiv (\neg p \lor p) \lor \neg q$ \hfill (associativiteit)
 
-Dus $\phi$ is een tautologie omdat Tautologie of ($\lor$) `iets anders' altijd een Tautologie is
+$\equiv \top \lor \neg q$ \hfill ($\top$-eigenschappen)
 
-
+$\equiv \top$ \hfill ($\top$-eigenschappen)
 
 
 
