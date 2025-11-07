@@ -5,6 +5,10 @@
 \usepackage{amsmath}
 \usepackage{enumerate}
 
+\usepackage{amssymb}
+\usepackage{dsfont}
+\usepackage{wasysym}
+
 \title{Assignment 2 \\ IB3702 Mathematics for Machine learning}
 \author{Harman Singh} % please overwrite this line with your name
 \date{November 7, 2025} % please overwrite this line with the date of submission
@@ -119,10 +123,160 @@ Then enter this value of $a$ into the equation for $b$:
 
 
 \subsection*{exercise b}
-\ldots
+
+To prove that $Q$ is orthogonal, I will shows that the inverse of it is equal to its transpose
+
+\[
+Q^{-1} = Q^T
+\]
+
+First I calculate $Q^T$:
+\[
+Q = 
+\begin{pmatrix}
+	-\frac{4}{5} & 0 & \frac{3}{5} \\
+	0 & 1 & 0 \\
+	\frac{3}{5} & 0 & \frac{4}{5}
+\end{pmatrix} \xrightarrow{}
+Q^T = 
+\begin{pmatrix}
+	-\frac{4}{5} & 0 & \frac{3}{5} \\
+	0 & 1 & 0 \\
+	\frac{3}{5} & 0 & \frac{4}{5}
+\end{pmatrix}
+\]
+
+Then I calculate $Q^{-1}$ using the formula for the inverse of a $3 \times 3$ matrix:
+
+\[
+Q^{-1} = \frac{1}{\det(Q)} adj(Q)
+\]
+
+First I calculate the determinant of $Q$:
+\[
+\det(Q) = -\frac{4}{5} \cdot \left(1 \cdot \frac{4}{5} - 0 \cdot 0\right) - 0 + \frac{3}{5} \cdot \left(0 \cdot 0 - 1 \cdot \frac{3}{5}\right) = -\frac{16}{25} - \frac{9}{25} = -1
+\]
+Now I calculate the adjugate of $Q$:
+\[
+adj(Q) = 
+\begin{pmatrix}
+	\left| \begin{matrix}
+		1 & 0 \\
+		0 & \frac{4}{5}
+	\end{matrix} \right| & -\left| \begin{matrix}
+		0 & 0 \\
+		\frac{3}{5} & \frac{4}{5}
+	\end{matrix} \right| & \left| \begin{matrix}
+		0 & 1 \\
+		\frac{3}{5} & 0
+	\end{matrix} \right| \\
+	-\left| \begin{matrix}
+		0 & \frac{3}{5} \\
+		0 & \frac{4}{5}
+	\end{matrix} \right| & \left| \begin{matrix}
+		-\frac{4}{5} & \frac{3}{5} \\
+		\frac{3}{5} & \frac{4}{5}
+	\end{matrix} \right| & -\left| \begin{matrix}
+		-\frac{4}{5} & 0 \\
+		\frac{3}{5} & 0
+	\end{matrix} \right| \\
+	\left| \begin{matrix}
+		0 & \frac{3}{5} \\
+		1 & 0
+	\end{matrix} \right| & -\left| \begin{matrix}
+		-\frac{4}{5} & \frac{3}{5} \\
+		0 & 0
+	\end{matrix} \right| & \left| \begin{matrix}
+		-\frac{4}{5} & 0 \\
+		0 & 1
+	\end{matrix} \right|
+\end{pmatrix}
+\]
+Calculating the determinants of the $2 \times 2$ matrices:
+\[
+\textit{Cof}(Q) = 
+\begin{pmatrix}
+	\frac{4}{5} & 0 & -\frac{3}{5} \\
+	0 & 1 & 0 \\
+	-\frac{3}{5} & 0 & -\frac{4}{5}
+\end{pmatrix} \xrightarrow{adj(Q) = {\textit{Cof}(Q)}^{T}}
+adj(Q) = 
+\begin{pmatrix}
+	\frac{4}{5} & 0 & -\frac{3}{5} \\
+	0 & 1 & 0 \\
+	-\frac{3}{5} & 0 & -\frac{4}{5}
+\end{pmatrix}
+\]
+
+Now I can calculate $Q^{-1}$:
+\[Q^{-1} = \frac{1}{\det(Q)} adj(Q)
+= \frac{1}{-1} \begin{pmatrix}
+	\frac{4}{5} & 0 & -\frac{3}{5} \\
+	0 & 1 & 0 \\
+	-\frac{3}{5} & 0 & -\frac{4}{5}
+\end{pmatrix} = -1 \cdot \begin{pmatrix}
+	\frac{4}{5} & 0 & -\frac{3}{5} \\
+	0 & 1 & 0 \\
+	-\frac{3}{5} & 0 & -\frac{4}{5}
+\end{pmatrix} =
+\begin{pmatrix}
+	-\frac{4}{5} & 0 & \frac{3}{5} \\
+	0 & 1 & 0 \\
+	\frac{3}{5} & 0 & \frac{4}{5}
+\end{pmatrix}
+\]
+
+\[
+\boxed{
+	\text{Since $Q^{-1} = Q^T$, $Q$ is orthogonal.}
+}
+\]
+
+
+
 
 \subsection*{exercise c}
-\ldots
+
+Two vectors are orthogonal if their dot product is 0, so I will just have to calculate the dot product for each column vector pair in $Q$.
+
+\[
+v_1 = \begin{pmatrix}
+	-\frac{4}{5} \\
+	0 \\
+	\frac{3}{5}
+\end{pmatrix}, \quad
+v_2 = \begin{pmatrix}
+	0 \\
+	1 \\
+	0
+\end{pmatrix}, \quad
+v_3 = \begin{pmatrix}
+	\frac{3}{5} \\
+	0 \\
+	\frac{4}{5}
+\end{pmatrix}
+\]
+
+Calculating $v_1 \cdot v_2$:
+\[
+v_1 \cdot v_2 = \left(-\frac{4}{5}\right)(0) + (0)(1) + \left(\frac{3}{5}\right)(0) = 0
+\]
+
+Calculating $v_1 \cdot v_3$:
+\[
+v_1 \cdot v_3 = \left(-\frac{4}{5}\right)\left(\frac{3}{5}\right) + (0)(0) + \left(\frac{3}{5}\right)\left(\frac{4}{5}\right) = -\frac{12}{25} + \frac{12}{25} = 0
+\]
+
+Calculating $v_2 \cdot v_3$:
+\[
+v_2 \cdot v_3 = (0)\left(\frac{3}{5}\right) + (1)(0) + (0)\left(\frac{4}{5}\right) = 0
+\]
+
+
+\[
+\boxed{\text{Since all dot products are 0, the column vectors of $Q$ are pairwise orthogonal.}}
+\]
+
 
 \subsection*{exercise d}
 \ldots
@@ -137,7 +291,57 @@ Then enter this value of $a$ into the equation for $b$:
 \section*{Problem 2}
 
 \subsection*{exercise a}
-\ldots
+
+Like mentioned in the hint, I will first show linear independence and then show that they span the space.
+
+\underline{Linear independence}
+
+To show that the set of vectors is linearly independent, I need to show that the only solution to the equation:
+\[c_1 v_1 + c_2 v_2 + c_3 v_3 = 0\] 
+is the trivial solution where all coefficients are 0.
+
+For us the equation becomes:
+
+\[
+c_1 (-1 + x) + c_2 (x + x^2) + c_3 (1 + x + x^2) = 0
+\]
+
+
+So I set up the equation:
+\[c_1 (-1) + c_1 (x) + c_2 (x) + c_2 (x^2) + c_3 (1) + c_3 (x) + c_3 (x^2) = 0\]
+
+This gives me the following system of equations:
+\[\begin{cases}
+	-c_1 + c_3 = 0 \\
+	c_1 + c_2 + c_3 = 0 \\
+	c_2 + c_3 = 0
+\end{cases}\]
+
+From the first equation, I deduce that $c_3 = c_1$. A numerical example $-(7) + 7 = 0$ shows that this is correct.
+
+Then I substitute $c_3$ in the second equation:
+\[c_1 + c_2 + c_3 = 0 \implies 2c_1 + c_2 = 0 \implies c_2 = -2c_1\]
+
+Then I substitute $c_2$ and $c_3$ in the third equation:
+\[c_2 + c_3 = 0 \implies -2c_1 + c_1 = 0 \implies -c_1 = 0 \implies c_1 = 0\]
+
+Then substituting $c_1$ back to find $c_2$ and $c_3$:
+\[c_2 = -2c_1 = -2(0) = 0\]
+\[c_3 = c_1 = 0\]
+So the only solution is $c_1 = c_2 = c_3 = 0$, which is the trivial solution. Therefore the set of vectors is linearly independent.
+
+
+\underline{Spanning the space}
+
+A basis for ${\mathbb{P}}_2 ({\mathbb{R}})$ must have 3 linearly independent vectors, because the dimension of ${\mathbb{P}}_2 ({\mathbb{R}})$ is 3.
+
+We have exactly 3 vectors, and have proven above that they are linearly independent. Therefore they also span the space ${\mathbb{P}}_2 ({\mathbb{R}})$.
+
+\[
+\boxed{ \{\ -1+x, x+x^2,1+x+x^2 \}\ \text{is indeed a basis for ${\mathbb{P}}_2 ({\mathbb{R}})$.}}
+\]
+
+
 
 \subsection*{exercise b}
 \ldots
@@ -157,36 +361,232 @@ Then enter this value of $a$ into the equation for $b$:
 \pagebreak
 \section*{Problem 3}
 
-% \begin{enumerate}[(a)]
-% 	\item answer/solution to this problem
-% 	\item answer/solution to this problem
-% \end{enumerate}
-
-
 \subsection*{exercise a}
-\ldots
+
+\[
+\begin{pmatrix}
+	1 & 0 \\
+	0 & 1
+\end{pmatrix} \xrightarrow{\text{reflection across $y=x$}}
+\begin{pmatrix}
+	0 & 1 \\
+	1 & 0
+\end{pmatrix} \xrightarrow{\text{reflection across $x$-axis}}
+\begin{pmatrix}
+	1 & 0 \\
+	0 & -1
+\end{pmatrix}
+\]
+
+The combined matrix is the product of the two matrices. I call the matrix after the first reflection $A$ and the one after the second reflection $B$:
+
+\[
+BA = \begin{pmatrix}
+	1 & 0 \\
+	0 & -1
+\end{pmatrix} \begin{pmatrix}
+	0 & 1 \\
+	1 & 0
+\end{pmatrix} = \begin{pmatrix}
+	0 & 1 \\
+	-1 & 0
+\end{pmatrix}
+\]
+
+Then if we multiply this with the original vector $\begin{pmatrix}
+	x \\
+	y
+\end{pmatrix}$ we get:
+
+\[
+\begin{pmatrix}
+	0 & 1 \\
+	-1 & 0
+\end{pmatrix} \begin{pmatrix}
+	x \\
+	y
+\end{pmatrix} = \begin{pmatrix}
+	(0)(x) + (1)(y) \\
+	(-1)(x) + (0)(y)
+\end{pmatrix} = \begin{pmatrix}
+	y \\
+	-x
+\end{pmatrix}
+\]
+
+So this transformation is a 90 degree rotation clockwise
+
 
 \subsection*{exercise b}
-\ldots
+
+1. The matrix $B$ will be:
+
+\[
+B = \begin{pmatrix}
+	\cos(75^\circ) & -\sin(75^\circ) \\
+	\sin(75^\circ) & \cos(75^\circ)
+\end{pmatrix}
+\]
+
+2. 
+\begin{itemize}
+	\item \textbf{Kernel of $B$}: a rotation by $75^\circ$ will only map the zero vector to the zero vector, so the kernel of $B$ only contains the zero vector. So the kernel of $B$ = $\{ {0} \}$ 
+	\item \textbf{Image of $B$}: A rotation is invertible and maps ${\mathbb{R}}^2$ to ${\mathbb{R}}^2$, so the image of {$B$} = ${\mathbb{R}}^2$
+\end{itemize}
+
+
+3. ${B}^{12}$ means we do the rotation 12 times. $12 \times 75^\circ = 900^\circ$. And knowing that a full rotation is $360^\circ$, the actual rotation is $(900 \mod 360) = 180^\circ$. Therefore ${B}^{12}$ is equivalent to a rotation of $180^\circ$.
+
+\[
+{B}^{12} = \begin{pmatrix}
+	\cos(180^\circ) & -\sin(180^\circ) \\
+	\sin(180^\circ) & \cos(180^\circ)
+\end{pmatrix} = \begin{pmatrix}
+	-1 & 0 \\
+	0 & -1
+\end{pmatrix}
+\]
+
+
+4. The matrix of ${B}^{-1}$ is the matrix that rotates by $-75^\circ$.
+
+\[
+{B}^{-1} = \begin{pmatrix}
+	\cos(-75^\circ) & -\sin(-75^\circ) \\
+	\sin(-75^\circ) & \cos(-75^\circ)
+\end{pmatrix} = \begin{pmatrix}
+	\cos(75^\circ) & \sin(75^\circ) \\
+	-\sin(75^\circ) & \cos(75^\circ)
+\end{pmatrix}
+\]
+
+ Since rotations are orthogonal, ${B}^{-1} = {B}^T$
 
 
 
 
 \pagebreak
 \section*{Problem 4}
+
+I construct the following matrix:
+
+\[
+A = \begin{pmatrix}
+	1 & 2 & 0 \\
+	0 & 1 & 3 \\
+	0 & 0 & 5
+\end{pmatrix}
+\]
+
+
 \subsection*{exercise a}
-\ldots
+
+I chose an upper triangular matrix, because in this type the determinant is easy to calculate, it's just the multiplication of the diagnonal elements.
+
+Here: $\det(A) = 1 \cdot 1 \cdot 5 = 5$
+
+And I also made sure to use simple numbers so the calculations would be easier.
+
+
 
 \subsection*{exercise b}
-\ldots
+
+(10) True, because the determinant is 5 (calculated in exercise a), $\neq$ 0
+
+(1) True, because a square matrix is invertible if the determinant is nonzero (our determinant is 5)
+
+(7)
+
+To calculate the RREF of $A$ I perform the following operations:
+
+\[
+\begin{pmatrix}
+	1 & 2 & 0 \\
+	0 & 1 & 3 \\
+	0 & 0 & 5
+\end{pmatrix} \xrightarrow{R_3 = \frac{1}{5} \cdot R_3} 
+\begin{pmatrix}
+	1 & 2 & 0 \\
+	0 & 1 & 3 \\
+	0 & 0 & 1
+\end{pmatrix} \xrightarrow{R_2 = R_2 - 3R_3}
+\begin{pmatrix}
+	1 & 2 & 0 \\
+	0 & 1 & 0 \\
+	0 & 0 & 1
+\end{pmatrix} \xrightarrow{R_1 = R_1 - 2R_2}
+\begin{pmatrix}
+	1 & 0 & 0 \\
+	0 & 1 & 0 \\
+	0 & 0 & 1
+\end{pmatrix}
+\]
+
+\[
+	= \mathds{I}_3
+\]
+
+(3) True, because the null space only contains the zero vector when the RREF is the identity matrix, which we have shown above.
+
+(4) True. From (3) we know that the null space only contains the zero vector, so the only solution to $A\vec{x} = \vec{0}$ is the trivial solution $\vec{x} = \vec{0}$
+
+(6) The rank of a matrix is the number of pivot columns in the RREF and ours has 3 pivots, so $rank(A) = 3 = n$
+
+(2) To prove this, we need to first fine the existence of a solution, and then prove the uniqueness of it.
+
+\underline{Existence of solution}
+
+Since $A$ is invertible (see (1)), we can multiply both sides of the equation $A\vec{x} = \vec{b}$ with $A^{-1}$:
+
+\[
+A^{-1}A\vec{x} = A^{-1}\vec{b} \implies \vec{x} = A^{-1}\vec{b}
+\]
+
+So there exists a solution for each $\vec{b} \in {\mathbb{R}}^n$
+
+\underline{Uniqueness of solution}
+
+If I assume there are two solutions $\vec{x_1}$ and $\vec{x_2}$ so that:
+
+\[
+A\vec{x_1} = \vec{b} \quad and \quad A\vec{x_2} = \vec{b}
+\]
+
+Then that would mean that:
+
+\[
+A (\vec{x_1} - \vec{x_2}) = \vec{0}
+\]
+
+From (4) we know that the only solution to this equation is the trivial solution $\vec{x_1} - \vec{x_2} = \vec{0}$, so $\vec{x_1} = \vec{x_2}$
+
+(5)
+
+\begin{itemize}
+	\item (5.1) True, the columns are linearly independent when the RREF is the identity matrix (see above)
+	\item (5.2) True, because the columns of $A$ span ${\mathbb{R}}^n$ when $A$ is invertible (see (1))
+\end{itemize}
+
+(8) The transpose of $A$ is:
+
+\[
+{A}^T = \begin{pmatrix}
+	1 & 0 & 0 \\
+	2 & 1 & 0 \\
+	0 & 3 & 5
+\end{pmatrix}
+\]
+
+The determinant of ${A}^T$ is also 5 ($1 \times 1 \times 5 = 5$), and a square matrix is invertible when the determinant is nonzero, so ${A}^T$ is invertible.
+
+(9) The rows of $A$ are the columns of ${A}^T$, and since I showed in (5) that the columns of a matrix form a basis for ${\mathbb{R}}^n$ when the matrix is invertible, the rows of $A$ also form a basis for ${\mathbb{R}}^n$
+
+
 
 
 \pagebreak
 \section*{Problem 5}
-\ldots
 
+I think Problem 4 from assignment 1 was pretty cool since it was very big, and finally solving it completely felt very rewarding. The problem itself was only a few lines, but my solution spanned 3 pages. Granted the way I wrote up solutions in that assignment was very (I'll call it) `verbose' so that might be why it spanned 3 pages $\smiley$
 
-
-
-\ldots
 \end{document}  
