@@ -7,6 +7,7 @@
 
 \usepackage{amssymb}
 \usepackage{dsfont}
+\usepackage{wasysym}
 
 \title{Assignment 2 \\ IB3702 Mathematics for Machine learning}
 \author{Harman Singh} % please overwrite this line with your name
@@ -122,10 +123,160 @@ Then enter this value of $a$ into the equation for $b$:
 
 
 \subsection*{exercise b}
-\ldots
+
+To prove that $Q$ is orthogonal, I will shows that the inverse of it is equal to its transpose
+
+\[
+Q^{-1} = Q^T
+\]
+
+First I calculate $Q^T$:
+\[
+Q = 
+\begin{pmatrix}
+	-\frac{4}{5} & 0 & \frac{3}{5} \\
+	0 & 1 & 0 \\
+	\frac{3}{5} & 0 & \frac{4}{5}
+\end{pmatrix} \xrightarrow{}
+Q^T = 
+\begin{pmatrix}
+	-\frac{4}{5} & 0 & \frac{3}{5} \\
+	0 & 1 & 0 \\
+	\frac{3}{5} & 0 & \frac{4}{5}
+\end{pmatrix}
+\]
+
+Then I calculate $Q^{-1}$ using the formula for the inverse of a $3 \times 3$ matrix:
+
+\[
+Q^{-1} = \frac{1}{\det(Q)} adj(Q)
+\]
+
+First I calculate the determinant of $Q$:
+\[
+\det(Q) = -\frac{4}{5} \cdot \left(1 \cdot \frac{4}{5} - 0 \cdot 0\right) - 0 + \frac{3}{5} \cdot \left(0 \cdot 0 - 1 \cdot \frac{3}{5}\right) = -\frac{16}{25} - \frac{9}{25} = -1
+\]
+Now I calculate the adjugate of $Q$:
+\[
+adj(Q) = 
+\begin{pmatrix}
+	\left| \begin{matrix}
+		1 & 0 \\
+		0 & \frac{4}{5}
+	\end{matrix} \right| & -\left| \begin{matrix}
+		0 & 0 \\
+		\frac{3}{5} & \frac{4}{5}
+	\end{matrix} \right| & \left| \begin{matrix}
+		0 & 1 \\
+		\frac{3}{5} & 0
+	\end{matrix} \right| \\
+	-\left| \begin{matrix}
+		0 & \frac{3}{5} \\
+		0 & \frac{4}{5}
+	\end{matrix} \right| & \left| \begin{matrix}
+		-\frac{4}{5} & \frac{3}{5} \\
+		\frac{3}{5} & \frac{4}{5}
+	\end{matrix} \right| & -\left| \begin{matrix}
+		-\frac{4}{5} & 0 \\
+		\frac{3}{5} & 0
+	\end{matrix} \right| \\
+	\left| \begin{matrix}
+		0 & \frac{3}{5} \\
+		1 & 0
+	\end{matrix} \right| & -\left| \begin{matrix}
+		-\frac{4}{5} & \frac{3}{5} \\
+		0 & 0
+	\end{matrix} \right| & \left| \begin{matrix}
+		-\frac{4}{5} & 0 \\
+		0 & 1
+	\end{matrix} \right|
+\end{pmatrix}
+\]
+Calculating the determinants of the $2 \times 2$ matrices:
+\[
+\textit{Cof}(Q) = 
+\begin{pmatrix}
+	\frac{4}{5} & 0 & -\frac{3}{5} \\
+	0 & 1 & 0 \\
+	-\frac{3}{5} & 0 & -\frac{4}{5}
+\end{pmatrix} \xrightarrow{adj(Q) = {\textit{Cof}(Q)}^{T}}
+adj(Q) = 
+\begin{pmatrix}
+	\frac{4}{5} & 0 & -\frac{3}{5} \\
+	0 & 1 & 0 \\
+	-\frac{3}{5} & 0 & -\frac{4}{5}
+\end{pmatrix}
+\]
+
+Now I can calculate $Q^{-1}$:
+\[Q^{-1} = \frac{1}{\det(Q)} adj(Q)
+= \frac{1}{-1} \begin{pmatrix}
+	\frac{4}{5} & 0 & -\frac{3}{5} \\
+	0 & 1 & 0 \\
+	-\frac{3}{5} & 0 & -\frac{4}{5}
+\end{pmatrix} = -1 \cdot \begin{pmatrix}
+	\frac{4}{5} & 0 & -\frac{3}{5} \\
+	0 & 1 & 0 \\
+	-\frac{3}{5} & 0 & -\frac{4}{5}
+\end{pmatrix} =
+\begin{pmatrix}
+	-\frac{4}{5} & 0 & \frac{3}{5} \\
+	0 & 1 & 0 \\
+	\frac{3}{5} & 0 & \frac{4}{5}
+\end{pmatrix}
+\]
+
+\[
+\boxed{
+	\text{Since $Q^{-1} = Q^T$, $Q$ is orthogonal.}
+}
+\]
+
+
+
 
 \subsection*{exercise c}
-\ldots
+
+Two vectors are orthogonal if their dot product is 0, so I will just have to calculate the dot product for each column vector pair in $Q$.
+
+\[
+v_1 = \begin{pmatrix}
+	-\frac{4}{5} \\
+	0 \\
+	\frac{3}{5}
+\end{pmatrix}, \quad
+v_2 = \begin{pmatrix}
+	0 \\
+	1 \\
+	0
+\end{pmatrix}, \quad
+v_3 = \begin{pmatrix}
+	\frac{3}{5} \\
+	0 \\
+	\frac{4}{5}
+\end{pmatrix}
+\]
+
+Calculating $v_1 \cdot v_2$:
+\[
+v_1 \cdot v_2 = \left(-\frac{4}{5}\right)(0) + (0)(1) + \left(\frac{3}{5}\right)(0) = 0
+\]
+
+Calculating $v_1 \cdot v_3$:
+\[
+v_1 \cdot v_3 = \left(-\frac{4}{5}\right)\left(\frac{3}{5}\right) + (0)(0) + \left(\frac{3}{5}\right)\left(\frac{4}{5}\right) = -\frac{12}{25} + \frac{12}{25} = 0
+\]
+
+Calculating $v_2 \cdot v_3$:
+\[
+v_2 \cdot v_3 = (0)\left(\frac{3}{5}\right) + (1)(0) + (0)\left(\frac{4}{5}\right) = 0
+\]
+
+
+\[
+\boxed{\text{Since all dot products are 0, the column vectors of $Q$ are pairwise orthogonal.}}
+\]
+
 
 \subsection*{exercise d}
 \ldots
@@ -160,17 +311,106 @@ Then enter this value of $a$ into the equation for $b$:
 \pagebreak
 \section*{Problem 3}
 
-% \begin{enumerate}[(a)]
-% 	\item answer/solution to this problem
-% 	\item answer/solution to this problem
-% \end{enumerate}
-
-
 \subsection*{exercise a}
-\ldots
+
+\[
+\begin{pmatrix}
+	1 & 0 \\
+	0 & 1
+\end{pmatrix} \xrightarrow{\text{reflection across $y=x$}}
+\begin{pmatrix}
+	0 & 1 \\
+	1 & 0
+\end{pmatrix} \xrightarrow{\text{reflection across $x$-axis}}
+\begin{pmatrix}
+	1 & 0 \\
+	0 & -1
+\end{pmatrix}
+\]
+
+The combined matrix is the product of the two matrices. I call the matrix after the first reflection $A$ and the one after the second reflection $B$:
+
+\[
+BA = \begin{pmatrix}
+	1 & 0 \\
+	0 & -1
+\end{pmatrix} \begin{pmatrix}
+	0 & 1 \\
+	1 & 0
+\end{pmatrix} = \begin{pmatrix}
+	0 & 1 \\
+	-1 & 0
+\end{pmatrix}
+\]
+
+Then if we multiply this with the original vector $\begin{pmatrix}
+	x \\
+	y
+\end{pmatrix}$ we get:
+
+\[
+\begin{pmatrix}
+	0 & 1 \\
+	-1 & 0
+\end{pmatrix} \begin{pmatrix}
+	x \\
+	y
+\end{pmatrix} = \begin{pmatrix}
+	(0)(x) + (1)(y) \\
+	(-1)(x) + (0)(y)
+\end{pmatrix} = \begin{pmatrix}
+	y \\
+	-x
+\end{pmatrix}
+\]
+
+So this transformation is a 90 degree rotation clockwise
+
 
 \subsection*{exercise b}
-\ldots
+
+1. The matrix $B$ will be:
+
+\[
+B = \begin{pmatrix}
+	\cos(75^\circ) & -\sin(75^\circ) \\
+	\sin(75^\circ) & \cos(75^\circ)
+\end{pmatrix}
+\]
+
+2. 
+\begin{itemize}
+	\item \textbf{Kernel of $B$}: a rotation by $75^\circ$ will only map the zero vector to the zero vector, so the kernel of $B$ only contains the zero vector. So the kernel of $B$ = $\{ {0} \}$ 
+	\item \textbf{Image of $B$}: A rotation is invertible and maps ${\mathbb{R}}^2$ to ${\mathbb{R}}^2$, so the image of {$B$} = ${\mathbb{R}}^2$
+\end{itemize}
+
+
+3. ${B}^{12}$ means we do the rotation 12 times. $12 \times 75^\circ = 900^\circ$. And knowing that a full rotation is $360^\circ$, the actual rotation is $(900 \mod 360) = 180^\circ$. Therefore ${B}^{12}$ is equivalent to a rotation of $180^\circ$.
+
+\[
+{B}^{12} = \begin{pmatrix}
+	\cos(180^\circ) & -\sin(180^\circ) \\
+	\sin(180^\circ) & \cos(180^\circ)
+\end{pmatrix} = \begin{pmatrix}
+	-1 & 0 \\
+	0 & -1
+\end{pmatrix}
+\]
+
+
+4. The matrix of ${B}^{-1}$ is the matrix that rotates by $-75^\circ$.
+
+\[
+{B}^{-1} = \begin{pmatrix}
+	\cos(-75^\circ) & -\sin(-75^\circ) \\
+	\sin(-75^\circ) & \cos(-75^\circ)
+\end{pmatrix} = \begin{pmatrix}
+	\cos(75^\circ) & \sin(75^\circ) \\
+	-\sin(75^\circ) & \cos(75^\circ)
+\end{pmatrix}
+\]
+
+ Since rotations are orthogonal, ${B}^{-1} = {B}^T$
 
 
 
@@ -200,32 +440,6 @@ And I also made sure to use simple numbers so the calculations would be easier.
 
 
 \subsection*{exercise b}
-
-% I will list the statements below, and then answer whether they are true or false for the matrix $A$ I constructed above.
-
-
-% \begin{enumerate}[(1)]
-% 	\item $A$ is invertible
-% 	\item The equation $A\vec{x} = \vec{b}$ has exactly one solution for each $\vec{b} \in {\mathbb{R}}^n$
-% 	\item The null space of $A$ contains only the zero vector $\mathcal{N}(A) = \{ \vec{0} \}$
-% 	\item The equation $A\vec{x} = \vec{0}$ has only the trivial solution $\vec{x} = \vec{0}$
-% 	\item The columns of $A$ form a basis for ${\mathbb{R}}^n$
-% 	\begin{itemize}
-% 		\item The columns of $A$ are linearly independent
-% 		\item The columns of $A$ span ${\mathbb{R}}^n$;$\mathcal{C}(A) = {\mathbb{R}}^n$
-% 	\end{itemize}
-% 	\item The rank of the matrix $A$ is $n$ 
-% 	\item The RREF of $A$ is the $n \times n$ identity matrix $ \mathds{I}_n $
-% 	\item The transpose matrix $A^T$ is invertible
-% 	\item The rows of $A$ form a basis for ${\mathbb{R}}^n$
-% 	\begin{itemize}
-% 		\item The rows of $A$ are linearly independent
-% 		\item The rows of $A$ span ${\mathbb{R}}^n $;$\mathcal{R}(A^T) = {\mathbb{R}}^n$
-% 	\end{itemize}
-% 	\item The determinant of $A$ is nonzero $\det(A) \neq 0$
-% \end{enumerate}
-
-% \textbf{my answers}
 
 (10) True, because the determinant is 5 (calculated in exercise a), $\neq$ 0
 
@@ -322,10 +536,7 @@ The determinant of ${A}^T$ is also 5 ($1 \times 1 \times 5 = 5$), and a square m
 
 \pagebreak
 \section*{Problem 5}
-\ldots
 
+I think Problem 4 from assignment 1 was pretty cool since it was very big, and finally solving it completely felt very rewarding. The problem itself was only a few lines, but my solution spanned 3 pages. Granted the way I wrote up solutions in that assignment was very (I'll call it) `verbose' so that might be why it spanned 3 pages $\smiley$
 
-
-
-\ldots
 \end{document}  
