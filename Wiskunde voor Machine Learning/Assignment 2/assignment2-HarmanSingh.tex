@@ -279,12 +279,117 @@ v_2 \cdot v_3 = (0)\left(\frac{3}{5}\right) + (1)(0) + (0)\left(\frac{4}{5}\righ
 
 
 \subsection*{exercise d}
-\ldots
+
+We need coefficients $c_0$, $c_1$, $c_2$, $c_3$ so that
+
+\[
+f(x) = c_0 P_0(x) + c_1 P_1(x) + c_2 P_2(x) + c_3 P_3(x)
+\]
+
+I write the right-hand side in standard polynomial form:
+\[
+= c_0 (1) + c_1 (x) + c_2 (\frac{3}{2} x^2 - \frac{1}{2}) + c_3 (\frac{5}{2}x^3 - \frac{3}{2} x)
+\]
+
+\[
+= (c_0 - \frac{1}{2} c_2) + (c_1 - \frac{3}{2} c_3)x + \frac{3}{2} c_2 x^2 + \frac{5}{2} c_3 x^3
+\]
+
+That gives me the following system of equations:
+\[
+\begin{cases}
+	c_0 - \frac{1}{2} c_2 = 0 \\
+	c_1 - \frac{3}{2} c_3 = \frac{1}{2} \\
+	\frac{3}{2} c_2 = 3 \\
+	\frac{5}{2} c_3 = \frac{5}{2}
+	
+\end{cases}
+\]
+
+From the third equation, I get: $c_2 = \frac{3}{3/2} = \frac{3}{3} \cdot 2 = 1 \cdot 2 = 2$
+
+From the fourth equation, I get: $c_3 = 1$
+
+Then I subsititute $c_2$ into the first equation:
+
+\[
+c_0 - \frac{1}{2} (2) = 0 \implies c_0 - \frac{2}{2} = 0 \implies c_0 - 1 = 0 \implies c_0 = 1
+\]
+
+Then I substitutte $c_3$ into the second equation:
+
+\[
+c_1 - \frac{3}{2} (1) = \frac{1}{2} \implies c_1 - \frac{3}{2} = \frac{1}{2} \implies c_1 = \frac{1}{2} + \frac{3}{2} = \frac{4}{2} = 2
+\]
+
+So the decomposition is:
+
+\[
+f(x) = 1 \cdot P_0(x) + 2 \cdot P_1(x) + 2 \cdot P_2(x) + 1 \cdot P_3(x)
+\]
+
+Now we need to verify this by calculating the right-hand side:
+
+\[
+P_0 + 2P_1 + 2P_2 + P_3 = 1 + 2x + 2(\frac{3}{2}x^2 - \frac{1}{2}) + (\frac{5}{2}x^3 - \frac{3}{2}x)
+\]
+\[
+= 1 + 2x + (3x^2 - 1) + (\frac{5}{2}x^3 - \frac{3}{2}x)
+\]
+\[
+= (2x - \frac{3}{2}x) + 3x^2 + \frac{5}{2}x^3
+\]
+\[
+= \frac{1}{2}x + 3x^2 + \frac{5}{2}x^3 \equiv f(x)
+\]
+
+
+\[
+\boxed{
+	c_0 = 1, c_1 = 2, c_2 = 2, c_3 = 1
+}
+\]
+
 
 \subsection*{exercise e}
-\ldots
 
+The norm of $f(x)$ is defined as:
 
+\[
+||f|| = \sqrt{\langle f, f \rangle}
+\]
+
+So first I calculate the inner product $\langle f, f \rangle$:
+
+\[
+\langle f, f \rangle = \int_{-1}^{1} {(f(x))}^2 dx = \int_{-1}^{1} {(x^2 + 3x^3)}^2 dx
+\]
+
+${(x^2 + 3x^3)}^2 = x^4 + 6x^5 + 9x^6 \quad$, so 
+
+\[
+\langle f, f \rangle = \int_{-1}^{1} (x^4 + 6x^5 + 9x^6) dx
+\]
+
+Now we split this integral into 3 seperate integrals:
+
+\begin{itemize}
+	\item $\int_{-1}^{1} (6x^5) dx$: this one is an odd integral, so it is just 0
+	\item 	\[
+				\int_{-1}^{1} (x^4) dx = {\left[ \frac{1}{5} x^5 \right]}_{-1}^{1} = \frac{1}{5} {(1)}^5 - \frac{1}{5} {(-1)}^5 = \frac{1}{5} - \left(-\frac{1}{5}\right) = \frac{2}{5}
+			\] 
+	\item 	\[
+				\int_{-1}^{1} (9x^6) dx = {\left[ \frac{9}{7} x^7 \right]}_{-1}^{1} = \frac{9}{7} {(1)}^7 - \frac{9}{7} {(-1)}^7 = \frac{9}{7} - \left(-\frac{9}{7}\right) = \frac{18}{7}
+			\]
+\end{itemize}
+
+\[
+\langle f, f \rangle = 0 + \frac{2}{5} + \frac{18}{7} = \frac{14}{35} + \frac{90}{35} = \frac{104}{35}
+\]
+
+\[
+||f|| = \sqrt{\langle f, f \rangle} = \sqrt{\frac{104}{35}} = \boxed{\frac{\sqrt{104}}{\sqrt{35}} = 1.72378 \ldots}
+\]
 
 
 \pagebreak
@@ -344,10 +449,136 @@ We have exactly 3 vectors, and have proven above that they are linearly independ
 
 
 \subsection*{exercise b}
-\ldots
+
+To prove this, we need to check the three properties of an inner product, according to the Savov book:
+\begin{itemize}
+	\item \textbf{Symmetric}: $\langle u, v \rangle = \langle v, u \rangle$
+	\item \textbf{Linear}: $\langle u, \alpha v_1 + \beta v_2 \rangle = \alpha \langle u, v_1 \rangle + \beta \langle u, v_2 \rangle$
+	\item \textbf{Positive semidefinite}: $\langle u, u \rangle \geq 0$ for all $u \in V$ with $\langle u, u \rangle = 0$ if and only if $u = 0$
+\end{itemize}
+
+\underline{Symmetric}
+
+To prove that $\langle f, g \rangle = \langle g, f \rangle$, we need to show that:
+
+\[
+\int_{-1}^{1} f(t) g(t) dt = \int_{-1}^{1} g(t) f(t) dt
+\]
+
+The only difference here is the order of multiplication of $f(t)$ and $g(t)$, but since multiplication is always symmetric (e.g. $3 \times 4$ gets the same result as $4 \times 3$), the integrals are equal, so the inner product is symmetric.
+
+
+\underline{Linear}
+
+An inner product is linear if:
+\[
+\langle \alpha f_1 + \beta f_2, g \rangle = \alpha \langle f_1, g \rangle + \beta \langle f_2, g \rangle
+\]
+
+So I need to show that:
+
+\[
+\langle \alpha f_1 + \beta f_2, g \rangle = \int_{-1}^{1} {(\alpha f_1(t) + \beta f_2(t))} g(t) dt
+\]
+
+First I can distribute $g(t)$ inside the integral:
+
+\[
+= \int_{-1}^{1} \alpha f_1(t) g(t) + \beta f_2(t) g(t) dt
+\]
+
+Then I can split the integral into two integrals:
+\[
+= \alpha \int_{-1}^{1} f_1(t) g(t) dt + \beta \int_{-1}^{1} f_2(t) g(t) dt
+\]
+
+\[
+= \alpha \langle f_1, g \rangle + \beta \langle f_2, g \rangle
+\]
+
+So the inner product is linear.
+
+
+
+\underline{Positive semidefinite}
+
+An inner product is positive semidefinite if 
+\[
+\langle f, f \rangle \geq 0 \quad and \quad \langle f, f \rangle = 0 \iff f = 0
+\]
+
+So instead of $g$ I put $f$ in the inner product:
+
+\[
+\langle f, f \rangle = \int_{-1}^{1} f(t) f(t) dt = \int_{-1}^{1} {(f(t))}^2 dt
+\]
+
+${(f(t))}^2$ is always non-negative so the integral of ${(f(t))}^2$ over any interval is always $\geq 0$.
+
+And if $\langle f, f \rangle = 0$, then the only way this can happen is when $f(t) = 0 \quad \forall t$ 
+
+
+\[
+\boxed{\text{All 3 properties hold, so this is indeed an inner product}}
+\]
 
 \subsection*{exercise c}
-\ldots
+\subsubsection*{1}
+
+We need to check whether $P_0$ and $P_1$ are mutually orthogonal. So I fill them in in the inner product:
+
+\[
+\langle P_0, P_1 \rangle = \int_{-1}^{1} P_0(x) P_1(x) dx = \int_{-1}^{1} (1) \cdot (x) dx = \int_{-1}^{1} x dx
+\]
+
+Then I evaluate the integral:
+\[
+\int_{-1}^{1} x dx = {\left[ \frac{1}{2} x^2 \right]}_{-1}^{1} = \frac{1}{2} {(1)}^2 - \frac{1}{2} {(-1)}^2 = \frac{1}{2} - \frac{1}{2} = 0
+\]
+
+\[\boxed{\text{Since the inner product is 0, $P_0(x)$ and $P_1(x)$ are mutually orthogonal.}}\]
+
+
+
+
+
+\subsubsection*{2}
+
+We need to check whether $P_2$ and $P_3$ are mutually orthogonal. So I fill them in in the inner product:
+
+\[
+\langle P_2, P_3 \rangle = \int_{-1}^{1} P_2(x) P_3(x) dx = \int_{-1}^{1} \left(\frac{1}{2} (3x^2 - 1)\right) \cdot \left(\frac{1}{2} (5x^3 - 3x)\right) dx
+\]
+
+I first multyiply the polynomials:
+
+\[
+P_2(x) P_3(x) = \frac{1}{2} (3x^2 - 1) \cdot \frac{1}{2} (5x^3 - 3x) = \frac{1}{4} (3x^2 - 1)(5x^3 - 3x) = \frac{1}{4} (15x^5 - 9x^3 - 5x^3 + 3x)
+\]
+
+\[
+= \frac{1}{4} (15x^5 - 14x^3 + 3x) 
+\]
+
+Now I just fill this back into the integral:
+
+\[
+\langle P_2, P_3 \rangle = \frac{1}{4} \int_{-1}^{1} (15x^5 - 14x^3 + 3x) dx
+\]
+
+We can seperate each term into a seperate integral, which would leave you with 3 integrals that have odd functions ($x^5$, $x^3$ and $x$), which are always 0.
+
+\[
+\int_{-1}^{1} 15x^5 dx = 0, \quad \int_{-1}^{1} -14x^3 dx = 0, \quad \int_{-1}^{1} 3x dx = 0
+\]
+
+\[
+\langle P_2, P_3 \rangle = \frac{1}{4} (0 + 0 + 0) = 0
+\]
+
+\[
+\boxed{\text{Since the inner product is 0, $P_2(x)$ and $P_3(x)$ are mutually orthogonal.}}
+\]
 
 \subsection*{exercise d}
 \ldots
