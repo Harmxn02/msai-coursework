@@ -5,6 +5,8 @@
 \usepackage{amsmath}
 \usepackage{enumerate}
 
+\usepackage{amssymb}
+
 \usepackage{charter}
 
 \title{Oefentoets 2 \\ IB0402 Logica, verzamelingen en relaties}
@@ -18,33 +20,289 @@
 \pagebreak
 \section*{Opgave 1}
 
+\[
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+	\hline
+	$p$ & $q$ & ${p}\lor{q}$ &${p}\text{ NAND }{p}$ & ${q}\text{ NAND }{q}$ & {p}\text{ NAND }{p} \quad  NAND  \quad {q}\text{ NAND }{q} \\
+	\hline
+	1 & 1 & 1 & 0 & 0 & 1  \\
+	1 & 0 & 1 & 0 & 1 & 1   \\
+	0 & 1 & 1 & 1 & 0 & 1   \\
+	0 & 0 & 0 & 1 & 1 & 0   \\
+	\hline
+\end{tabular}
+\]
+
+
+
 \pagebreak
 \section*{Opgave 2}
-\ldots
+\subsection*{oefening a}
+
+Niet iedereen houdt van koffie:
+
+$\neg \forall x (H(x,c))$
+
+of: $\exists x (\neg H(x,c))$
+
+
+\subsection*{oefening b}
+Iedereen houdt wel van iemand:
+
+$\forall x \exists y (H(x,y))$
+
+
+\subsection*{oefening c}
+Iedereen die van koffie houdt, kent iemand die niet van koffie houdt:
+
+$\forall x \exists y(H(x,c)) \rightarrow  \exists y (K(x,y) \land \neg H(y,c))$
+
 
 \pagebreak
 \section*{Opgave 3}
-\ldots
+\subsection*{oefening a}
+
+$p \rightarrow ((\neg q \rightarrow p) \rightarrow q)$
+
+$\equiv p \rightarrow ((\neg \neg q \lor p) \rightarrow q)$ \hfill implicatie-eliminatie
+
+$\equiv p \rightarrow (\neg (\neg \neg q \lor p) \lor q)$ \hfill implicatie-eliminatie
+
+$\equiv \neg p \lor (\neg (\neg \neg q \lor p) \lor q)$ \hfill implicatie-eliminatie
+
+$\equiv \neg p \lor (\neg (q \lor p) \lor q)$ \hfill dubbele negatie
+
+$\equiv \neg p \lor ((\neg q \land \neg p) \lor q)$ \hfill De Morgan
+
+$\equiv \neg p \lor ((q \lor \neg q) \land (q \lor \neg p))$ \hfill distributiviteit
+
+$\equiv \neg p \lor (\top \land (q \lor \neg p))$ \hfill $\top$-eigenschappen
+
+$\equiv \neg p \lor (q \lor \neg p)$ \hfill $\top$-eigenschappen
+
+$\equiv \neg p \lor (\neg p \lor q)$ \hfill communativiteit
+
+$\equiv (\neg p \lor \neg p) \lor q$ \hfill associativiteit
+
+$\boxed{\equiv \neg p \lor q}$ \hfill idempotentie
+
+
+\subsection*{oefening b}
+
+De DNV uit \textbf{oefening a} staat ook in de CNV, namelijk: $\boxed{\neg{p} \lor {q}}$
+
+
 
 \pagebreak
 \section*{Opgave 4}
-\ldots
+
+
+${((A \cap B^c) \cup C^c)}^c \cup ((A-B) \cap C)$
+
+
+$\equiv {((A \cap B^c) \cup C^c)}^c \cup ((A \cap B^c) \cap C)$ \hfill verschilregel
+
+$\equiv {({(A \cap B^c)}^c \cap {(C^c)}^c)} \cup ((A \cap B^c) \cap C)$ \hfill De Morgan
+
+$\equiv {({(A \cap B^c)}^c \cap C)} \cup ((A \cap B^c) \cap C)$ \hfill dubbel complement
+
+$\equiv [{(A \cap B^c)}^c \cup (A \cap B^c)] \cap C$ \hfill ik factoriseer hier C
+
+$\equiv U \cap C$ \hfill complementregel
+
+$\equiv C$ \hfill 1-element
+
+
+
+
 
 \pagebreak
 \section*{Opgave 5}
-\ldots
+
+
+$x$
+
+$\equiv x \sqcup 0$ \hfill 0-regel
+
+$\equiv x \sqcup (a \sqcap \bar{a})$ \hfill complement
+
+$\equiv (x \sqcup a) \sqcap (x \sqcup \bar{a})$ \hfill distributiviteit
+
+$\equiv (y \sqcup a) \sqcap (y \sqcup \bar{a})$ \hfill \textit{(gegeven in opgave)}
+
+$\equiv y \sqcup (a \sqcap \bar{a})$ \hfill distributiviteit
+
+$\equiv y \sqcup 0$ \hfill complement
+
+$\equiv y$ \hfill 0-regel
+
+
+$\boxed{x=y}$
+
 
 \pagebreak
 \section*{Opgave 6}
-\ldots
+
+\subsection*{oefening a}
+
+\begin{itemize}
+	\item \textbf{Graaf A}: ingrafen: 2 $\quad$ uitgraven: 2
+	\item \textbf{Graaf B}: ingrafen: 1 $\quad$ uitgraven: 3
+	\item \textbf{Graaf C}: ingrafen: 3 $\quad$ uitgraven: 2
+	\item \textbf{Graaf D}: ingrafen: 2 $\quad$ uitgraven: 1
+	\item \textbf{Graaf E}: ingrafen: 1 $\quad$ uitgraven: 1
+\end{itemize}
+
+De som van de ingrafen is (2+1+3+2+1) = 9
+
+De som van de uitgrafen is (2+3+2+1+1) = 9
+
+\boxed{\text{9=9, dus ja ze zijn gelijk}}
+
+\subsection*{oefening b}
+
+Je maakt de volgende sneden
+
+\begin{enumerate}
+	\item $\underline{a \rightarrow c \rightarrow d \rightarrow a} \rightarrow b \rightarrow e \rightarrow c \rightarrow a \rightarrow c \rightarrow d$ \hfill snij dit deel weg
+	\item $\underline{a \rightarrow b \rightarrow e \rightarrow c \rightarrow a} \rightarrow c \rightarrow d$ \hfill en dan dit deel
+	\item $\boxed{a \rightarrow c \rightarrow d}$ \hfill
+\end{enumerate}
+
+
+
+\subsection*{oefening c}
+
+\begin{itemize}
+	\item Graaf met lengte 2: $a \rightarrow c \rightarrow a$
+	\item Graaf met lengte 3: $a \rightarrow b \rightarrow d \rightarrow a$
+	\item Graaf met lengte 4: $e \rightarrow c \rightarrow a \rightarrow b \rightarrow e$
+\end{itemize}
+
+
+
+
+
 
 \pagebreak
 \section*{Opgave 7}
-\ldots
+
+\subsection*{oefening a}
+
+Eerst vereenvoudigen we het functievoorschrift:
+
+\[
+{(x-2)}^2 + {(x+2)}^2
+\]
+
+$\equiv (x^2 -4x +4) + (x^2 + 4x + 4)$
+
+$\equiv x^2 -4x +4 + x^2 + 4x + 4$
+
+$\equiv 2x^2 -4x + 4 + 4x + 4$
+
+$\equiv 2x^2 + 4 + 4$
+$\equiv 2x^2 + 8$
+
+Het bereik $B$ is dan:
+
+\[
+B = \{ f(x) \mid x \in \mathbb{R} \} = \{ y \in \mathbb{R} \mid y \geq 8 \}
+\]
+
+Want als $x$ = 0, dan $2x^2$ = 0 is, en dan kan je alsnog nooit y-waarden uitkomen kleiner dan 8. Het exponent zorgt er dan ook voor dan 0 de kleinste x-waarde is die je kan invullen daar, want negatieve waarden tot het kwadraat worden positieve waarden
+
+
+\subsection*{oefening b}
+Nee, voor waarden onder $y < 8$ zijn er geen origineel $x$ zodat $f(x) = y$
+
+\subsection*{oefening c}
+Nee, door het kwadraat kan je 2 verschillende cijfers nemen maar hetzelfde antwoord uitkomtn
+
+Neem bijvoorbeeld $x_1 = -4$ en $x_2 = 4$, dan geldt $f(x_1) = f(x_2) = 40$ terwijl $x_1 \neq x_2$
+
+\subsection*{oefening d}
+
+Hier vullen we de functie $f(x)$ gewoon in als $x$. We krijgen dus $f(f(x))$
+
+\[
+f({2x}^2+8) = 2{({2x}^2+8)}^2+8 = 2(4x^4 + 32x^2 + 64)+ 8 = 8x^4 + 64x^2 + 128 + 8
+\]
+
+\[
+\boxed{8x^4 + 64x^2 + 136}
+\]
+
 
 \pagebreak
 \section*{Opgave 8}
-\ldots
+
+\subsection*{oefening a}
+Om aan te tonen dat $R$ een equivalentierelatie is, moeten we aantonen dat het reflexief, symmetrisch en transitief is.
+
+\textbf{reflexief}
+
+$\forall a \in A$ geldt dat $aRa$
+
+Dus hier willen we bewijzen dan $x_1 * x_2 * x_1 * x_2 > 0$ is. We kunnen dit herschrijven als:
+
+${x_1}^2 * {x_2}^2$
+
+Dit zal altijd $>$ 0 zijn omdat kwadraten positief zijn
+
+% Hier kunnen we 3 situaties schetsen.
+
+% \begin{itemize}
+% 	\item A. Als beide $x_1$ en $x_2$ positief zijn \hfill (bij vermenigvuldiging $x_1 * x_2$, $\geq$ 0)
+% 	\item B. Als beide $x_1$ en $x_2$ negatief zijn \hfill (bij vermenigvuldiging $x_1 * x_2$, $\geq$ 0)
+% 	\item C. Als een van $x_1$ en $x_2$ negatief zijn \hfill (bij vermenigvuldiging $x_1 * x_2$, $\leq$ 0)
+% \end{itemize}
+
+% Bij alle van deze situaties kom je met de berekening $(x_1 * x_2)*(x_1 * x_2)$ altijd aan een getal $>$ 0
+
+% Bij situaties A en B, vermenigvuldig je twee positieve getallen met elkaar, want altijd $>$ 0 is.
+
+% Bij situatie C, vermenigvuldig je twee negatieve getallen met elkaar, wat ook altijd $>$ 0 is.
+
+
+\textbf{symmetrisch}
+
+als $aRb$ dan $bRa$
+
+Als $x_1 * x_2 * y_1 * y_2 > 0$ dan zal $y_1 * y_2 * x_1 * x_2 > 0$ want je vermenigvuldigd hier gewoon.
+
+
+\textbf{transitief}
+
+als $aRb$ en $bRc$ dan $aRc$
+
+Stel dat $(x_1,x_2) R (y_1,y_2) $ en $(y_1,y_2) R (z_1,z_2) $. Dan is $(x_1 x_2 y_1 y_2) > 0$ en $(y_1 y_2 z_1 z_2) > 0 $
+
+Te bewijzen is dat $(x_1,x_2)R(z_1, z_2)$ dus zodat $(x_1 x_2 z_1 z_2) > 0 $
+
+\begin{itemize}
+	\item als $x_1 x_2 > 0$, dan moet ook $y_1 y_2 > 0$, en dus ook $z_1 z_2 > 0$ zodat volgt $(x_1 x_2 z_1 z_2) > 0 $ 
+	\item als $x_1 x_2 < 0$, dan moet ook $y_1 y_2 < 0$, en dus ook $z_1 z_2 < 0$ zodat volgt $(x_1 x_2 z_1 z_2) < 0 $ 
+\end{itemize}
+
+De relatie $R$ is reflexief, symmetrisch en transitief, dus een equivalentierelatie
+
+
+\subsection*{oefening b}
+
+\[
+{[(1,1)]}_{\mathbb{R}} = \{(x_1,x_2) \in \mathbb{R}^{*} \times \mathbb{R}^{*} \mid (1,1) R (x_1,x_2) \} = \{(x_1,x_2) \mid x_1 x_2 > 0 \}
+\]
+
+
+\subsection*{oefening c}
+
+Het quotientverzameling $\mathbb{R}^{*} \times \mathbb{R}^{*} / R$ is:
+\[
+\{ {[(1,1)]}_{\mathbb{R}}, {[(1,-1)]}_{\mathbb{R}} \}
+\]
+
+en bestaat dus uit 2 elementen
 
 \pagebreak
 \section*{Opgave 9}
