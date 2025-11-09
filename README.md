@@ -10,6 +10,8 @@ This repository contains exercises and assignments made with LaTeX during the pu
 -   Every folder corresponds to a course.
 -   Inside each folder, you'll find subfolders for exercises and assignments.
 
+> Additionally, sample exams can be found under 'voorbeeldtentamen'
+
 ### Commit messages
 
 -   I use the `(partial)` prefix if the work is still in progress.
