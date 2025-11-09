@@ -47,4 +47,46 @@ Hiervoor zoeken we best de volgende elementen:
 Dit is geen tautologie (een uitspraak die altijd waar is) of een contradictie (een uitspraak die altijd onwaar is), maar een $\boxed{\text{contingentie}}$ omdat het waar (1) is in 3 van de 4 gevallen maar onwaar (0) in 1 van de 4 gevallen (namelijk waar $p$ en $q$ beiden 0 zijn)
 
 
+\section*{Opgave 2}
+\ldots
+
+\section*{Opgave 3}
+\ldots
+
+
+
+\pagebreak
+\section*{Opgave 4}
+
+${({A}^c \cup B)}^c \cap {(A \cap B)}^c$
+
+$\equiv  ({(A^c)}^c \cap B^c) \cap ({A}^c \cup {B}^c)$ \hfill (De Morgan, beide kanten)
+
+$\equiv  (A \cap B^c) \cap ({A}^c \cup {B}^c)$ \hfill (dubbel complement)
+
+$\equiv  [(A \cap B^c) \cap {A}^c] \cup [(A \cap B^c) \cap {B}^c]$ \hfill (distributiewet)
+
+$\equiv  [(A \cap A^c) \cap {B}^c] \cup [(A \cap B^c) \cap {B}^c]$ \hfill (associativiteit)
+
+$\equiv  (\emptyset \cap {B}^c) \cup [(A \cap B^c) \cap {B}^c]$ \hfill (complementregels)
+
+$\equiv  \emptyset \cup [(A \cap B^c) \cap {B}^c]$ \hfill (nulelement)
+
+$\equiv  [(A \cap B^c) \cap {B}^c]$ \hfill (nulelement)
+
+$\equiv  [A \cap (B^c \cap {B}^c)]$ \hfill (associativiteit)
+
+$\equiv  [A \cap ({B}^c)]$ \hfill (idempotentie)
+
+$\equiv \boxed{A \cap B^c}$
+
+
+
+
+
+
+
+
+
+
 \end{document}
