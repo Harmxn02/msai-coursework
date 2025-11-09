@@ -15,6 +15,94 @@
 \maketitle
 % chktex-file 44
 
+\pagebreak
+\section*{Opgave 1}
+\subsection*{oefening a}
+
+
+\begin{itemize}
+	\item $\neg (t \land w)$
+	\item $t \rightarrow s$
+	\item $s \rightarrow \neg w$
+\end{itemize}
+
+
+\subsection*{oefening b}
+
+Bovenstaande redenering is niet correct, omdat er twee situaties zijn waar je studeert en naar werk gaat.
+
+\[
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+	\hline
+	$t$ & $w$ & $s$ & ${t}\land{w}$ & $\neg{w}$ & $\neg{(t \land{w})}$ & ${t}\rightarrow{s}$ & ${s}\rightarrow\neg{w}$  \\
+	\hline
+	0 & 0 & 0 & 0 & 1 & 1 & 1 & 1 \\
+	0 & 0 & 1 & 0 & 1 & 1 & 1 & 1 \\
+	0 & 1 & 0 & 1 & 0 & 0 & 1 & 1 \\
+	0 & 1 & 1 & 1 & 0 & 0 & 1 & 0 \\
+	1 & 0 & 0 & 1 & 1 & 0 & 0 & 1 \\
+	1 & 0 & 1 & 1 & 1 & 0 & 1 & 1 \\
+	1 & 1 & 0 & 1 & 0 & 0 & 0 & 1 \\
+	1 & 1 & 1 & 1 & 0 & 0 & 1 & 0 \\
+	\hline
+\end{tabular}
+\]
+
+
+
+\pagebreak
+\section*{Opgave 2}
+\ldots
+
+\pagebreak
+\section*{Opgave 3}
+\ldots
+
+\pagebreak
+\section*{Opgave 4}
+\subsection*{oefening a}
+\ldots
+
+\subsection*{oefening b}
+
+${((A \cap {B}^c) \cup C)}^c \cup ((A-B)\cap C^c)$
+
+$\equiv {((A \cap {B}^c) \cup C)}^c \cup ((A \cap B^c)\cap C^c)$ \hfill (verschilregel)
+
+$\equiv {({(A \cap {B}^c)}^c \cap C^c)} \cup ((A \cap B^c)\cap C^c)$ \hfill (De Morgan)
+
+$\equiv {[{(A \cap {B}^c)}^c \cap C^c]} \cup [(A \cap B^c)\cap C^c]$ \hfill \textit{herschrijf}
+
+$\equiv [{{(A \cap {B}^c)}^c} \cup (A \cap B^c)] \cap C^c$ \hfill (factoriseer $C^c$)
+
+$\equiv U \cap C^c$ \hfill (complementregel)
+
+$\equiv C^c$ \hfill (eenelement)
+
+
+\pagebreak
+\section*{Opgave 5}
+\ldots
+
+\pagebreak
+\section*{Opgave 6}
+\ldots
+
+\pagebreak
+\section*{Opgave 7}
+\ldots
+
+\pagebreak
+\section*{Opgave 8}
+\ldots
+
+\pagebreak
+\section*{Opgave 9}
+\ldots
+
+\pagebreak
+\section*{Opgave 10}
+\ldots
 
 
 
