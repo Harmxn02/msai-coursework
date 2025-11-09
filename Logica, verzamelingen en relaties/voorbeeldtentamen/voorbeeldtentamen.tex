@@ -47,9 +47,32 @@ Hiervoor zoeken we best de volgende elementen:
 Dit is geen tautologie (een uitspraak die altijd waar is) of een contradictie (een uitspraak die altijd onwaar is), maar een $\boxed{\text{contingentie}}$ omdat het waar (1) is in 3 van de 4 gevallen maar onwaar (0) in 1 van de 4 gevallen (namelijk waar $p$ en $q$ beiden 0 zijn)
 
 
+\pagebreak
 \section*{Opgave 2}
-\ldots
 
+$\forall x P(x,y) \rightarrow \neg \exists y(Q(y) \lor R(y))$
+
+$\equiv \forall x P(x,y) \rightarrow 		\neg \exists z(Q(z) \lor R(z)) $ \hfill (alfabetische variant)
+
+$\equiv \forall x P(x,y) \rightarrow 		\forall z \neg(Q(z) \lor R(z)) $ \hfill (dualiteit)
+
+$\equiv \neg \forall x P(x,y) \lor 		\forall z \neg(Q(z) \lor R(z)) $ \hfill ($\rightarrow$-eliminatie)
+
+$\equiv \exists x \neg P (x,y) \lor 		\forall z \neg(Q(z) \lor R(z)) $ \hfill (dualiteit)
+
+$\equiv \exists x \neg P (x,y) \lor 		\exists x \forall z \neg(Q(z) \lor R(z)) $ \hfill (loze existentiele kwantificatie)
+
+$\equiv \exists x (\neg P (x, y)) \lor (\forall z  \neg(Q(z) \lor R(z)))$ \hfill (distributiviteit)
+
+$\equiv \exists x (\forall z \neg P (x, y)) \lor (\forall z  \neg(Q(z) \lor R(z)))$ \hfill (loze universele kwantificatie)
+
+$\equiv \exists x (\forall z \neg P (x, y)) \lor (\neg(Q(z) \lor R(z)))$ \hfill (loze universele kwantificatie)
+
+$\equiv \boxed{\exists x \forall z (\neg P (x, y) \lor \neg(Q(z) \lor R(z)))}$
+
+
+
+\pagebreak
 \section*{Opgave 3}
 \ldots
 
