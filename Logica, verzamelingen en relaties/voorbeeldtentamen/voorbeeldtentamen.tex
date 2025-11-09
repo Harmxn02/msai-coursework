@@ -1,0 +1,50 @@
+\documentclass[11pt, a4paper]{article}
+\usepackage{geometry}
+\usepackage[parfill]{parskip}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{enumerate}
+
+\usepackage{charter}
+
+\title{Voorbeeldtentamen 3 \\ IB0402 Logica, verzamelingen en relaties}
+\author{Harman Singh}
+\date{Month Day, Year}
+
+\begin{document}
+\maketitle
+% chktex-file 44
+
+\pagebreak
+\section*{Opgave 1}
+\subsection*{oefening a}
+
+\[
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|}
+	\hline
+	${p}$ & ${q}$ & $\neg{p}$ & ${p}\land{q}$ & ${p}\rightarrow{q}$ & ${p}\leftrightarrow{q}$ & ${p}\land{\neg{q}}$ & $\neg{({p}\land{\neg{q}})}$ & ${p}\lor{q}$  & $\neg{({p}\land\neg{q})} \rightarrow({p}\lor{q})$ \\
+	\hline
+	1 & 1 & 0 & 1 & 1 & 1 & 0 & 1 & 1 & 1 \\
+	1 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 1 & 1 \\
+	0 & 1 & 1 & 0 & 1 & 0 & 0 & 1 & 1 & 1 \\
+	0 & 0 & 1 & 0 & 1 & 1 & 0 & 1 & 0 & 0 \\
+	\hline
+\end{tabular}
+\]
+
+We zoeken $\neg (p \land \neg{q}) \rightarrow (p \lor q)$
+
+Hiervoor zoeken we best de volgende elementen:
+
+\begin{itemize}
+	\item $\neg{q}$
+	\item $({p}\land{\neg{q}})$
+	\item $\neg{({p}\land{\neg{q}})}$
+\end{itemize}
+
+\subsection*{oefening b}
+
+Dit is geen tautologie (een uitspraak die altijd waar is) of een contradictie (een uitspraak die altijd onwaar is), maar een $\boxed{\text{contingentie}}$ omdat het waar (1) is in 3 van de 4 gevallen maar onwaar (0) in 1 van de 4 gevallen (namelijk waar $p$ en $q$ beiden 0 zijn)
+
+
+\end{document}
