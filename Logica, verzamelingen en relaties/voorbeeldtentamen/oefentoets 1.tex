@@ -52,7 +52,42 @@ Bovenstaande redenering is niet correct, omdat er twee situaties zijn waar je st
 
 \pagebreak
 \section*{Opgave 2}
-\ldots
+
+$(p \land r \land q) \lor (\neg p \land \neg r) \lor (p \land r \land \neg q)$
+
+$\equiv (p \land r \land q) \lor (p \land r \land \neg q) \lor (\neg p \land \neg r)$ \hfill commutativiteit
+
+$\equiv ((p \land r) \land (q \lor \neg q)) \lor (\neg p \land \neg r)$ \hfill distributiviteit, omgekeerd
+
+$\equiv ((p \land r) \land \top) \lor (\neg p \land \neg r)$ \hfill $\top$-eigenschappen
+
+$\equiv (p \land r) \lor (\neg p \land \neg r)$ \hfill $\top$-eigenschappen
+
+$\equiv ((p \land r) \lor \neg p) \land ((p \land r) \lor \neg r)$ \hfill distributiviteit
+
+$\equiv ((p \lor \neg p) \land (r \lor \neg p)) \land ((p \lor \neg r) \land (r \lor \neg r))$ \hfill distributiviteit
+
+$\equiv ((\top) \land (r \lor \neg p)) \land ((p \lor \neg r) \land (\top))$ \hfill $\top$-eigenschappen
+
+$\equiv (r \lor \neg p) \land (p \lor \neg r)$ \hfill $\top$-eigenschappen
+
+% $\equiv \neg \neg (r \lor \neg p) \land \neg \neg (p \lor \neg r)$ \hfill dubbele negatie, omgekeerd
+
+Dan werk ik aan het rechterdeel
+
+$\neg ((p \land \neg r) \lor (\neg p \land r))$
+
+$\equiv (\neg(p \land \neg r) \land \neg(\neg p \land r))$ \hfill de Morgan
+
+$\equiv ((\neg p \lor \neg \neg r) \land (\neg \neg p \lor \neg r))$ \hfill de Morgan
+
+$\equiv ((\neg p \lor r) \land (p \lor \neg r))$ \hfill dubbele negatie
+
+$\equiv ((r \lor \neg p) \land (p \lor \neg r))$ \hfill commutativiteit
+
+Beide delen kunnen equivalent gesteld worden tot $((r \lor \neg p) \land (p \lor \neg p))$, dus ze zijn equivalent
+
+
 
 \pagebreak
 \section*{Opgave 3}
@@ -98,7 +133,40 @@ $\equiv C^c$ \hfill (eenelement)
 
 \pagebreak
 \section*{Opgave 9}
-\ldots
+
+\subsection*{oefening a}
+
+Om aan te tonen dan R een partiele ordening is, moeten we aantonen dat R reflexief, antisymmetrisch en transitief is.
+
+\underline{reflexief}:
+$aRa$
+
+Het deel dat tussen haakjes staat bewijst dat R reflexief is. 
+
+Dus hier: $(a,b)T(a,b)$, want ($a$ = $c$) en ($b$ = $d$). Dus $aRa$
+
+
+\underline{antisymmetrisch}:
+$aRb \neq bRa$
+
+Hier neem ik willekeurige waarden.
+
+Stel $a = 1$, $b = 2$, $c = 3$, $d = 4$.
+
+$(a,b)R(c,d)$ klopt, want ($1+2 \le 3+4$), maar $(c,d)R(a,b)$ klopt niet, want ($3+4 \not\le 1+2$).
+
+
+\underline{transitief}:
+$\text{als } aRb \text{ en } bRc \text{ dan } aRc$
+
+Hier neem ik ook weer willekeurige waarden.
+
+Stel $a = 1$, $b = 2$, $c = 3$, $d = 4$, $e = 5$, $f = 6$.
+
+Omdat $(a,b)R(c,d)$ klopt, want ($1+2 \le 3+4$), en $(c,d)R(e,f)$ klopt, want ($3+4 \le 5+6$), dan klopt ook $(a,b)R(e,f)$, want ($1+2 \le 5+6$).
+
+Voor E+F heb je dus een som groter nodig dan C en D, en die waarden (omdat de som van C en D sowieso al groter waren dan A+B) zullen sowieso groter zijn dan A+B.
+
 
 \pagebreak
 \section*{Opgave 10}
