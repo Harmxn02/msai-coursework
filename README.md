@@ -36,7 +36,7 @@ e.g. `Wiskunde voor Machine Learning - Assignment 1`
 
 | Course code | Course name | Link |
 | ----------- | ----------- | ---- |
-| IM1102 | Deep Neural Engineering | [[link]](./Deep%20Neural%20Engineering/) |
+| IM0712 | Key Topics in Artificial Intelligence | [[link]](./Key%20Topics%20in%20Artificial%20Intelligence/) |
 | IM0902 | Bayesian Reasoning and Learning | [[link]](./Bayesian%20Reasoning%20and%20Learning/) |
 | IM0802 | Responsible Artificial Intelligence | [[link]](./Responsible%20Artificial%20Intelligence/) |
 | IM1312 | Research Methods for Artificial Intelligence | [[link]](./Research%20Methods%20for%20Artificial%20Intelligence/) |
