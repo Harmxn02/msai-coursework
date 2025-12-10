@@ -3,7 +3,7 @@
 
 # Master of Science in Artificial Intelligence
 
-This repository contains exercises and assignments made with LaTeX during the pursuit of my Master of Science in Artificial Intelligence @ [**Open Universiteit**](https://ou.nl/).
+This repository contains exercises and assignments made during the pursuit of my Master of Science in Artificial Intelligence @ [**Open Universiteit**](https://ou.nl/).
 
 ## Structure
 
