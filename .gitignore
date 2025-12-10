@@ -13,6 +13,7 @@
 # Don't these files specifically
 !README.md
 !.gitignore
+!temp
 
 # and just stuff I prefer to keep track of
 !*.ipynb
