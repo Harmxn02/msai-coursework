@@ -36,19 +36,19 @@ e.g. `Wiskunde voor Machine Learning - Assignment 1`
 
 |     | Course code | Course name                                                     | Link                                                              |
 | --- | ----------- | --------------------------------------------------------------- | ----------------------------------------------------------------- |
-| 🟧  | IM0712      | Key Topics in Artificial Intelligence                           | [[link]](./Key%20Topics%20in%20Artificial%20Intelligence/)        |
-| 🟧  | IM0902      | Bayesian Reasoning and Learning                                 | [[link]](./Bayesian%20Reasoning%20and%20Learning/)                |
-| 🟧  | IM0802      | Responsible Artificial Intelligence                             | [[link]](./Responsible%20Artificial%20Intelligence/)              |
-| 🟧  | IM1312      | Research Methods for Artificial Intelligence                    | [[link]](./Research%20Methods%20for%20Artificial%20Intelligence/) |
-| 🟥  | IM1202      | Model-Based Artificial Intelligence                             |                                                                   |
-| 🟥  | IM1412      | Generative Artificial Intelligence                              |                                                                   |
-| 🟥  | IM1102      | Machine Learning                                                |                                                                   |
-| 🟥  | IM1102      | Deep Neural Engineering                                         |                                                                   |
-| 🟥  | IM9502      | AI Graduation Assignment Preparation                            |                                                                   |
-| 🟥  | IM9506      | Artificial Intelligence Graduation Assignment (Master's thesis) |                                                                   |
+| 🟨  | IM0712      | Key Topics in Artificial Intelligence                           | [[link]](./Key%20Topics%20in%20Artificial%20Intelligence/)        |
+| 🟨  | IM0902      | Bayesian Reasoning and Learning                                 | [[link]](./Bayesian%20Reasoning%20and%20Learning/)                |
+| 🟨  | IM0802      | Responsible Artificial Intelligence                             | [[link]](./Responsible%20Artificial%20Intelligence/)              |
+| 🟨  | IM1312      | Research Methods for Artificial Intelligence                    | [[link]](./Research%20Methods%20for%20Artificial%20Intelligence/) |
+| 🟧  | IM1202      | Model-Based Artificial Intelligence                             |                                                                   |
+| 🟧  | IM1412      | Generative Artificial Intelligence                              |                                                                   |
+| 🟧  | IM1102      | Machine Learning                                                |                                                                   |
+| 🟧  | IM1102      | Deep Neural Engineering                                         |                                                                   |
+| 🟧  | IM9502      | AI Graduation Assignment Preparation                            |                                                                   |
+| 🟧  | IM9506      | Artificial Intelligence Graduation Assignment (Master's thesis) |                                                                   |
 
 🟩 = completed
 &nbsp;
-🟧 = in progress
+🟨 = in progress
 &nbsp;
-🟥 = not started (yet)
+🟧 = not started (yet)
