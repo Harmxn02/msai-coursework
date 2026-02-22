@@ -18,9 +18,9 @@ This repository contains exercises and assignments made during the pursuit of my
 -   I use the `(template)` prefix if I have added the source files, but have not started the assignment yet.
 -   I use the `(fix)` prefix if I made corrections
 
-When an assignment is completed, I make a final commit without any of these prefixes. So ideally, after a course has been completed, each entry for that course should just be the name of the course and the assignment number.
+<!-- When an assignment is completed, I make a final commit without any of these prefixes. So ideally, after a course has been completed, each entry for that course should just be the name of the course and the assignment number.
 
-e.g. `Wiskunde voor Machine Learning - Assignment 1`
+e.g. `Wiskunde voor Machine Learning - Assignment 1` -->
 
 ## Courses
 
