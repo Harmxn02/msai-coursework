@@ -22,6 +22,9 @@
 !*.png
 !*.md
 
+# HTML exports
+!*.html
+
 # temp: certain folders
 
 1.1 - History and Philosophy of AI/
