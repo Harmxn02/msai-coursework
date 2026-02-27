@@ -1,0 +1,15 @@
+# Everything
+*
+
+# Except these files types
+!*.tex
+!*.pdf
+!*.bib
+!*.md
+!*.sty
+
+# .gitignore itself
+!.gitignore
+
+# Make sure git can traverse directories
+!*/

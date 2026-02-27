@@ -1,0 +1,119 @@
+\documentclass{article}
+
+% ready for submission
+\usepackage[preprint, nonatbib]{neurips_2025}
+
+% to compile a preprint version, e.g., for submission to arXiv, add
+% add the [preprint] option:
+% \usepackage[preprint]{nips_2018}
+
+% to compile a camera-ready version, add the [final] option, e.g.:
+% \usepackage[final]{nips_2018}
+
+% to avoid loading the natbib package, add option nonatbib:
+% \usepackage[nonatbib]{nips_2018}
+
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{tabularx}
+
+\usepackage[utf8]{inputenc} % allow utf-8 input
+\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
+\usepackage{hyperref}       % hyperlinks
+\usepackage{url}            % simple URL typesetting
+\usepackage{booktabs}       % professional-quality tables
+\usepackage{amsfonts}       % blackboard math symbols
+\usepackage{nicefrac}       % compact symbols for 1/2, etc.
+\usepackage{microtype}      % microtypography
+\usepackage{xcolor}		  	% colors
+
+
+
+% ------------------------------
+%  Hyperlink and Citation Setup
+% ------------------------------
+
+\usepackage[square,numbers,sort&compress]{natbib}
+\bibliographystyle{unsrtnat}
+
+% \usepackage{color}
+% \definecolor{blue}{RGB}{7, 116, 183}
+% \definecolor{red}{RGB}{255, 0, 0}
+
+% \hypersetup{
+% 	colorlinks=true,
+% 	linkcolor=red,
+% 	citecolor=blue,
+% 	urlcolor=blue,
+% 	filecolor=blue,
+% 	anchorcolor=black,
+% 	menucolor=black,
+% }
+
+
+% -----------------
+%  Keywords Setup
+% -----------------
+
+\providecommand{\keywords}[1]
+{
+	\small
+	\textbf{Keywords: } #1
+}
+
+
+
+
+% Note. For the workshop paper template, both \title{} and \workshoptitle{} are required, with the former indicating the paper title shown in the title and the latter indicating the workshop title displayed in the footnote. 
+\title{IM0802 \textendash{} Responsible Artificial Intelligence \\ {\normalfont Assignment 1: Quantum AI}}
+
+
+% The \author macro works with any number of authors. There are two commands
+% used to separate the names and addresses of multiple authors: \And and \AND.
+%
+% Using \And between authors leaves it to LaTeX to determine where to break the
+% lines. Using \AND forces a line break at that point. So, if LaTeX puts 3 of 4
+% authors names on the first line, and the last on the second line, try using
+% \AND instead of \And before the third author name.
+
+\author{%
+Harman Preet Singh$^1$ \\ 852863316 \\ \texttt{harman.pnahal@gmail.com} \\
+% \And John Doe \\ Affiliation \\ Address \\ \texttt{john.doe@gmail.com} \\
+% \And Jane Doe \\ Affiliation \\ Address \\ \texttt{jane.doe@gmail.com} \\
+}
+
+\begin{document}
+\maketitle
+
+
+% ABSTRACT
+\input{sections/Abstract.tex}
+
+% \keywords{
+% 	keyword 1
+% 	$\cdot$ keyword 2
+% 	$\cdot$ keyword 3
+% }
+
+
+\section{Introduction}
+\label{sec:introduction}
+\input{sections/1-Introduction.tex}
+
+\section{Issue}
+\label{sec:issue}
+\input{sections/2-Issue.tex}
+
+\section{Solution}
+\label{sec:solution}
+\input{sections/3-Solution.tex}
+
+
+% \bibliographystyle{plainnat}
+\bibliography{references}
+
+% (optional) APPENDIX
+% \input{sections/Appendix.tex}
+
+
+\end{document}

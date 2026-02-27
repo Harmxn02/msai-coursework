@@ -1,0 +1,66 @@
+\appendix
+\section{Appendix}
+\subsection{Supplemental Results}
+In Table \ref{table-probing-logreg-senteval-result} we show the results for the probing tasks using a Logistic Regression instead of a MLP.
+
+\begin{table}[h]
+\centering
+\caption{Linguistic probing tasks results using Logistic Regression. Values in this table are accuracies on the test set.}
+\label{table-probing-logreg-senteval-result}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lcccccccccc}
+\toprule
+\textbf{Approach}         & \textbf{BShift} & \textbf{CoordInv} & \textbf{ObjNum} & \textbf{SentLen} & \textbf{SOMO} & \textbf{SubjNum} & \textbf{Tense} & \textbf{TopConst} & \textbf{TreeDepth} & \textbf{WC} \\
+\midrule
+\multicolumn{11}{l}{\textit{Baseline}}                                                                                \\
+\midrule
+Random Embedding          &        50.69 &                  49.68 &      50.92 &   16.44 &      50.02 &       49.67 &  50.32 &             5.09 &  16.83 &         0.12 \\
+\midrule
+\multicolumn{11}{l}{\textit{Experiments}}                                                                             \\
+\midrule
+ELMo (BoW, all layers, 5.5B) &        \textbf{84.87} &                  68.27 &      \textbf{88.84} &   \textbf{87.70} &      \textbf{58.21} &       \textbf{90.76} &  89.28 &            83.71 &  \textbf{43.13} &        88.86 \\
+ELMo (BoW, all layers, original)      &        84.19 &                  67.27 &      87.32 &   85.73 &      57.63 &       89.66 &  89.81 &            \textbf{83.72} &  42.13 &        89.90 \\
+ELMo (BoW, top layer, original)      &        79.66 &                  65.44 &      86.47 &   73.71 &      56.82 &       88.92 &  88.60 &            80.37 &  39.40 &        72.78 \\
+Word2Vec (BoW, google news)             &        50.36 &                  52.98 &      79.57 &   34.91 &      49.33 &       80.59 &  85.28 &            58.17 &  26.98 &        90.20 \\
+$p$-mean (monolingual)               &        50.08 &                  50.74 &      82.62 &   80.06 &      50.95 &       81.30 &  87.69 &            60.57 &  35.53 &        \textbf{98.85} \\
+FastText (BoW, common crawl)             &        49.62 &                  52.32 &      79.88 &   55.81 &      49.39 &       79.79 &  86.57 &            63.37 &  32.23 &        91.09 \\
+GloVe (BoW, common crawl)                &        49.84 &                  53.84 &      76.25 &   60.29 &      49.80 &       78.37 &  84.08 &            62.74 &  31.87 &        88.69 \\
+USE (DAN)         &        59.87 &                  54.78 &      68.86 &   55.15 &      54.71 &       72.01 &  79.50 &            58.39 &  24.86 &        60.05 \\
+USE (Transformer)    &        59.67 &                  57.88 &      73.82 &   73.91 &      57.35 &       76.69 &  85.68 &            65.17 &  27.53 &        54.19 \\
+InferSent (AllNLI)            &        56.49 &                  65.93 &      79.90 &   80.73 &      53.21 &       84.28 &  86.95 &            78.13 &  37.53 &        95.18 \\
+Skip-Thought         &        69.48 &                  \textbf{68.98} &      83.24 &   81.27 &      54.51 &       86.16 &  \textbf{90.27} &            82.11 &  39.61 &        79.64 \\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+In Table \ref{table-downstream-logreg-senteval-result} we show the results for the downstream tasks using a Logistic Regression instead of a MLP.
+
+\begin{table}[h]
+\centering
+\caption{Results for the downstream classification tasks using a Logistic Regression. Values in this table are the accuracies on the test set.}
+\label{table-downstream-logreg-senteval-result}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lccccccccc}
+\toprule
+\textbf{Approach}                     & \textbf{CR}    & \textbf{MPQA}  & \textbf{MR}    & \textbf{MRPC}  & \textbf{SICK-E} & \textbf{SST-2} & \textbf{SST-5} & \textbf{SUBJ}  & \textbf{TREC}  \\
+\midrule
+\textit{Baseline}             &       &       &       &       &        &       &       &       &       \\
+\midrule
+Random Embedding          &  57.86 &  67.87 &  49.90 &  62.14 &           54.27 &  48.00 &  23.08 &  49.24 &  21.6 \\
+\midrule
+\textit{Experiments}          &       &       &       &       &        &       &       &       &       \\
+\midrule
+ELMo (BoW, all layers, 5.5B) &  84.98 &  \textbf{91.28} &  \textbf{81.09} &  \textbf{76.35} &           81.35 &  \textbf{86.77} &  46.33 &  \textbf{94.87} &  92.2 \\
+ELMo (BoW, all layers, original)      &  84.64 &  88.86 &  80.70 &  71.42 &           82.06 &  85.06 &  \textbf{48.05} &  94.55 &  \textbf{93.6} \\
+ELMo (BoW, top layer, original)      &  83.87 &  88.99 &  79.06 &  71.54 &           79.38 &  84.40 &  46.74 &  94.00 &  \textbf{93.6} \\
+Word2Vec (BoW, google news)            &  78.60 &  88.17 &  76.76 &  72.17 &           78.30 &  80.56 &  42.13 &  90.46 &  84.2 \\
+$p$-mean (monolingual)               &  80.37 &  88.95 &  78.61 &  74.72 &           83.42 &  82.81 &  44.03 &  92.63 &  88.2 \\
+FastText (BoW, common crawl)             &  78.83 &  87.75 &  77.96 &  74.43 &           78.87 &  82.32 &  45.11 &  91.68 &  83.4 \\
+GloVe (BoW, common crawl)                &  78.22 &  87.87 &  77.23 &  72.70 &           78.55 &  80.29 &  44.66 &  91.18 &  83.0 \\
+USE (DAN)         &  79.74 &  83.16 &  73.82 &  69.33 &           78.47 &  79.74 &  41.99 &  91.73 &  89.6 \\
+USE (Transformer)    &  \textbf{85.48} &  86.79 &  79.92 &  71.94 &           81.17 &  86.22 &  47.69 &  93.52 &  93.2 \\
+InferSent (AllNLI)            &  83.23 &  89.00 &  79.89 &  75.59 &           \textbf{86.20} &  83.64 &  44.98 &  92.65 &  89.0 \\
+Skip-Thought         &  80.45 &  86.83 &  76.31 &  73.80 &           82.91 &  81.82 &  43.80 &  93.60 &  89.2 \\
+\bottomrule
+\end{tabular}}
+\end{table}
