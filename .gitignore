@@ -25,6 +25,9 @@
 # HTML exports
 # !*.html
 
+# readme files
+!readme
+
 # temp: certain folders
 
 1.1 - History and Philosophy of AI/
