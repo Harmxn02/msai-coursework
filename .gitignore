@@ -23,7 +23,7 @@
 !*.md
 
 # HTML exports
-!*.html
+# !*.html
 
 # temp: certain folders
 
