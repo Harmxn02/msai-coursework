@@ -1,0 +1,141 @@
+\documentclass{article}
+
+% ready for submission
+\usepackage[preprint, nonatbib]{neurips_2025}
+
+% to compile a preprint version, e.g., for submission to arXiv, add
+% add the [preprint] option:
+% \usepackage[preprint]{nips_2018}
+
+% to compile a camera-ready version, add the [final] option, e.g.:
+% \usepackage[final]{nips_2018}
+
+% to avoid loading the natbib package, add option nonatbib:
+% \usepackage[nonatbib]{nips_2018}
+
+\usepackage[english]{babel}
+
+\usepackage{amsmath}
+
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{tabularx}
+
+\usepackage[utf8]{inputenc} % allow utf-8 input
+\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
+\usepackage{hyperref}       % hyperlinks
+\usepackage{url}            % simple URL typesetting
+\usepackage{booktabs}       % professional-quality tables
+\usepackage{amsfonts}       % blackboard math symbols
+\usepackage{nicefrac}       % compact symbols for 1/2, etc.
+\usepackage{microtype}      % microtypography
+\usepackage{xcolor}		  	% colors
+
+
+
+\usepackage{csquotes}
+
+
+
+% ------------------------------
+%  Hyperlink and Citation Setup
+% ------------------------------
+
+\usepackage[square, numbers, sort&compress]{natbib}
+\bibliographystyle{unsrtnat}
+
+% \usepackage{color}
+% \definecolor{blue}{RGB}{7, 116, 183}
+% \definecolor{red}{RGB}{255, 0, 0}
+
+% \hypersetup{
+% 	colorlinks=true,
+% 	linkcolor=red,
+% 	citecolor=blue,
+% 	urlcolor=blue,
+% 	filecolor=blue,
+% 	anchorcolor=black,
+% 	menucolor=black,
+% }
+
+
+
+\title{
+    IM0802 \textendash{} Responsible Artificial Intelligence \\
+    {\normalfont Assignment 2: ``Paper Title Goes Here''}
+}
+
+
+
+
+
+
+% The \author macro works with any number of authors. There are two commands
+% used to separate the names and addresses of multiple authors: \And and \AND.
+%
+% Using \And between authors leaves it to LaTeX to determine where to break the
+% lines. Using \AND forces a line break at that point. So, if LaTeX puts 3 of 4
+% authors names on the first line, and the last on the second line, try using
+% \AND instead of \And before the third author name.
+
+\author{
+\textbf{Alexander Soerjo} \\[0.3em] student id \And
+\textbf{Harman Singh} \\[0.3em] 852863316}
+
+\begin{document}
+\maketitle
+
+
+\begin{abstract}
+    \input{sections/abstract-a}
+    \input{sections/abstract-h}
+\end{abstract}
+
+\section{Introduction 350}
+\label{sec:introduction}
+% \begin{itemize}
+%     \item Introduce the context where the system exists/should exist. 
+%     \item Discuss the aim/main functionality of the system and how is AI used/should be designed to be used. 
+%     \item Briefly mention who are the stakeholders involved/impacted by using this system. Consider here the following flow:
+% \end{itemize}
+
+% Action of AI system -> Impact on Stakeholders => deal with the Impact 
+% on ethical norms and values
+
+% This implies that there is an ethical problem in the Action of AI system 
+% component => responsibility controls should be applied.
+
+% This section aims to provide an introductory perspective and prepare the 
+% ethical issue(s) that will be further explained.  
+    
+% \input{sections/introduction-a.tex}
+\input{sections/introduction-h.tex}
+
+
+% \section{Ethical Issue Identification 750}
+% \label{sec:ethical}
+% \input{sections/ethical-a.tex}
+% \input{sections/ethical-h.tex}
+
+
+% \section{Responsible Solution Design 900}
+% \label{sec:responsible}
+% \input{sections/responsible-a.tex}
+% \input{sections/responsible-h.tex}
+
+
+% \section{Discussion and Conclusions 400}
+% \label{sec:discussion}
+% \input{sections/discussion-a.tex}
+% \input{sections/discussion-h.tex}
+
+
+% citet: \citet{arrieta2019explainableartificialintelligencexai}
+
+% citep: \citep{arrieta2019explainableartificialintelligencexai}
+
+
+
+\bibliography{references}
+
+\end{document}
