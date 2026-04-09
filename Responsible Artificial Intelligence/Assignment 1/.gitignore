@@ -13,3 +13,7 @@
 
 # Make sure git can traverse directories
 !*/
+
+
+# exclude the large book PDF file
+Deep_Fakes_A_Critical_Lexicon_for_Digital_Museolog.pdf
