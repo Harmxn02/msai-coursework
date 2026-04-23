@@ -1,3 +1,33 @@
-% \subsection{Technical Layer}
-% \subsection{Sociotechnical Layer}
-% \subsection{Governance Layer}
+\citet{info12090385}'s CHOF framework divides oversight into three layers, next to three phases. For each of these cells we capture the failures identified with Habsora's implementation.
+\subsection{Technical Layer}
+\subsubsubsection{\textbf{Failures}}
+Deep neural network which inherently is opaque, can't see reasoning.
+No evidence that they have XAI tools like SHAP or Grad-CAM which can help.
+\subsubsubsection{\textbf{Evidence}}
+Commanders report no visibility into which signals shape the decision.
+The IHL assessment requires to know \textit{why} something was selected, else there would be no legal grounds.
+\subsubsubsection{\textbf{Impact}}
+\citet{khan2021ethicsaisystematicliterature} Maps into this with: \textbf{P-01} transparency, \textbf{P-03} accountability, \textbf{CH-06} no technical understanding \& \textbf{CH09} no legal framework.
+Commanders cannot give real judgement as they cannot understand it with e.g. XAI.
+
+\subsection{Sociotechnical Layer}
+\subsubsubsection{\textbf{Failures}}
+Automation bias, people trust AI outputs too much, gradual stamp approvement. Also with the short time window this effect is amplified.
+\citet{mhcof} argue that you need two conditions to responsibility: adequate information and meaningful freedom of action. With the previous sentence discarding both. 
+\citet{miller2018explanationartificialintelligenceinsights} shows that from social science we have an explainer and explainee. Without showing what went into a decision people can't make real decisions when they only get a recommendation. 
+Combined with the volume it makes it fully impossible, thus no moral or legal weight.
+\subsubsubsection{\textbf{Evidence}}
+Former IDF commands mention rubber stamping/click approve.
+\subsubsubsection{\textbf{Impact}}
+IDF commanders, get 'responsibility' for something they can't even evaluate + civilian targetet by the system. Which 'normally' takes a long time of real oversight and weighings, and are now reduced to a button press.
+
+\subsection{Governance Layer}
+\subsubsubsection{\textbf{Failures}}
+UNESCO says it's not legal to delegate life-or-death choices to an AI system. 
+\citet{aimag.v40i1.2848}'s accountability cap is applicable. The responsibilities go: developers -> habsora algorithm -> IDF officer with recommendations -> approving commander. Thus spreading 'responsibility' when someone dies. 
+No ethical/stakeholder impact assessment, such as VSD
+\subsubsubsection{\textbf{Evidence}}
+10\% error tolerance in recommendations. 
+Civilians are stakeholders, and certainly not consulted. 
+\subsubsubsection{\textbf{Impact}}
+World wide IHL
