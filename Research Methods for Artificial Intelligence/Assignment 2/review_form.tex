@@ -1,6 +1,10 @@
 \documentclass{article}
 \usepackage[utf8]{inputenc}
 
+\usepackage{parskip}
+\usepackage{hyperref}
+
+
 \title{Proposal review form }
 \author{~} %leave empty
 \date{\today}
@@ -10,7 +14,7 @@
 \maketitle
 
 \section*{General information}
-  
+
 
 \subsection*{Title of the proposal}
 
@@ -22,15 +26,41 @@ Jacco Provoost
 
 \section{Part 1}
 
-The questions in this part probably take several few lines to answer. Make sure to explain your answer. 
+The questions in this part probably take several few lines to answer. Make sure to explain your answer.
 
-\subsection{Give two positive general points about the proposal} 
+\subsection{Give two positive general points about the proposal}
 
-\subsection{Give two general points to be improved in the proposal}  
+\begin{enumerate}
+	\item It's an interesting topic. You compare expensive cloud models with more affordable smaller models. This is highly relevant especially with recent news of specific companies limiting usage of their cloud models.
+\end{enumerate}
 
-\subsection{Is it generally clear what this proposal wants to investigate? Why (not) ?} 
+
+\subsection{Give two general points to be improved in the proposal}
+
+\begin{enumerate}
+	\item
+	\item Some parts of the proposal may be difficult to follow for people unfamiliar with the topic. I explain it more in-depth it in the question \textbf{`Is the proposed research setup clear enough?'}.
+\end{enumerate}
+
+
+
+
+
+\subsection{Is it generally clear what this proposal wants to investigate? Why (not) ?}
+
+Yes, it's quite clear. The abstract already does a good job, and the Background section expands on it. RQ1 sums it up nicely
 
 \subsection{Are the research questions and hypotheses clear and properly formulated? Are the concepts used in them operationalised in good fashion?}
+
+There are 3 research questions. RQ1 is clear because that is the general gist of the paper.
+
+In RQ2 and RQ3 you already assume there is going to be a difference in performance. You also limit yourself to two things to examine (type of violation, difficulty of the prompt).
+
+I think you can better just examine multiple different things that might affect performance in your research.
+
+For example, in the \textbf{`Research Methods - Models'} section you explain why you use different model families, so, you can put to the test whether different combinations impact performance Or model size (parameters).
+
+You can also test whether models with `thinking capabilities' perform better than those without.
 
 \subsection{What is your impression of the research setup/design? Can the research questions be answered this way?}
 
@@ -40,21 +70,53 @@ The questions in this part probably take several few lines to answer. Make sure 
 
 \section{Part 2}
 
-The questions in this part probably require a single line to provide feedback to. Try to say a bit more than just yes or no (or partially). In other words, explain your answers. 
+The questions in this part probably require a single line to provide feedback to. Try to say a bit more than just yes or no (or partially). In other words, explain your answers.
 
-\subsection{What is the quality of the language/style/spelling used?} 
+\subsection{What is the quality of the language/style/spelling used?}
 
 \subsection{What is the quality of the used terminology?}
 
+Good. You don't use overly difficult language, and the words that require explanation (like `LLM-as-a-Judge') are explained in the text.
+
 \subsection{Did the authors make good use of literature?}
+
+Yes. Relevant literature is cited where it is necessary. You make good use of it to explain where your research differs from previous work or why you are doing something a particular way.
+
+
+\textbf{Background:}
+
+\begin{itemize}
+	\item Ayyamperumal and Ge: multiple possible solutions, of which the paper addresses one, namely `LLMs-as-a-Judge'
+	\item Huang et al.: relevant work but with a different focus
+	\item Li et al.: explains why you are focussing on fine-tuning
+\end{itemize}
+
+\textbf{Research methods - Models}
+\begin{itemize}
+	\item Li et al.: using relevant literature to explain why you should use models of varying families/vendors
+\end{itemize}
+
 
 \subsection{Is the proposal written with attention to detail?}
 
 \subsection{Is the proposed research setup clear enough?}
 
+I appreciate the work you put into the figures, it helps visualise the setup together with the text. However, I did have some trouble following the arrows. You have written an entire research proposal on the topic, so the figure makes 100\% sense to you, but for me as an outsider, it was a slight bit difficult to follow.
+
+Flowcharts have standardised shapes, which I would recommend you to use. Rectangles for actions, diamonds for decisions, circles for start/end, arrows to indicate flow. Using this design-language will make it easier for outsiders to understand the flow.
+
+It doesn't have to be a flowchart, you can also use a UML diagram or something else.
+
+
+
 \subsection{Is it fun/interesting to read?}
 
 \subsection{Is the planning of the proposal adequate?}
+
+Yes. The planning spans 7 weeks, and the deadline for the assignment is 11 weeks after the peer-review is submitted, so you have spare time.
+
+You might want to take more time for the `System setup'. You have 3-4 spare weeks to allocate, so perhaps you can take 2 weeks for this instead of just 1. Writing a lot of code to set up an entire system can be more time-consuming than expected, and its important to have a good system in place before you can start making analyses.
+
 
 \subsection{Is the proposed data analysis feasible?}
 
