@@ -31,7 +31,7 @@ The questions in this part probably take several few lines to answer. Make sure 
 \subsection{Give two positive general points about the proposal}
 
 \begin{enumerate}
-	\item It's an interesting topic. You compare expensive cloud models with more affordable smaller models. This is highly relevant especially with recent news of specific companies limiting usage of their cloud models, so local models might be the only option going forwads.
+	\item The topic is interesting and relevant. You compare expensive cloud models with more affordable smaller models. This is highly relevant especially with recent news of specific companies limiting usage of their cloud models, so local models might be the only option going forwards.
 	\item You have clearly thought out how the actual research will be done. You added graphs, and explanations at each step of the process. You also already know which models, tools and hardware you will use.
 \end{enumerate}
 
@@ -39,7 +39,7 @@ The questions in this part probably take several few lines to answer. Make sure 
 \subsection{Give two general points to be improved in the proposal}
 
 \begin{enumerate}
-	\item Some parts of the proposal may be difficult to follow for people unfamiliar with the topic. I explain it more in-depth it in the question \textbf{`Is the proposed research setup clear enough?'}.
+	\item Some parts of the proposal (e.g. the figures) may be difficult to follow for people unfamiliar with the topic. It's explained further in the question \textbf{`Is the proposed research setup clear enough?'}.
 	\item It's best-practice to cite the journal version of a paper instead of the arXiv preprint (if it has actually been published in a peer-reviewed journal). More on this in the question \textbf{`Is the proposal written with attention to detail?'}.
 \end{enumerate}
 
@@ -55,27 +55,25 @@ Yes, it's quite clear. The abstract already does a good job, and the Background 
 
 There are 3 research questions. RQ1 is clear because that is the general gist of the paper.
 
-In RQ2 and RQ3 you already assume there is going to be a difference in performance. You also limit yourself to two things to examine (type of violation, difficulty of the prompt).
+In RQ2 and RQ3 you already assume there is going to be a difference in performance. You also limit yourself to two things to examine (type of violation, difficulty of the prompt). This may limit your discovery. It may also cause bias in your results. Reformulate these two research questions to be more exploratory by examining multiple different things that might affect performance in your research.
 
-I think you can better just examine multiple different things that might affect performance in your research.
-
-For example, in the \textbf{`Research Methods - Models'} section you explain why you use different model families, so, you can put to the test whether different combinations impact performance Or model size (parameters).
+For example, in the \textbf{`Research Methods - Models'} section you explain why you use different model families, so, you can put to the test whether different combinations impact performance. Or model size (parameters).
 
 You can also test whether models with `thinking capabilities' perform better than those without.
 
 \subsection{What is your impression of the research setup/design? Can the research questions be answered this way?}
 
-I believe you should be able to answer the research question this way, but I would maybe like to see you compare more than 3 models (I am led to believe you will only compare the 3 models in Table 3: \verb|GPT-OSS|, \verb|Phi-3-mini| and \verb|LLaMA 3.1| ?). Using only 3 models might not be enough to draw conclusions.
+You should be able to answer the research question this way, but a comparison between more than 3 models would be worthwhile. If only the 3 models in Table 3 are used, this may limit the generalisability of your findings and it will not be enough to draw conclusions.
 
 \subsection{Is the domain/simulation chosen relevant and/or interesting and is it clearly described?}
 
-I have already said it in this peer review multiple times, but I do believe that it's relevant, and because it's relevant I personally find it interesting. The domain is explained adequately in the Background section.
+The proposed research is relevant, making it also interesting. The domain is explained adequately in the Background section.
 
 \subsection{Give some suggestions to the authors on how to improve the final report if they would recycle the text from the proposal}
 
-I've already mentioned it in the 2 general points to be improved, but make sure to use the journal version of papers instead of the arXiv preprint if they have been published in a peer-reviewed journal.
+Make sure to explain terminology that might not be clear to everyone, like `VRAM' and `B' in the context of `parameters'.
 
-For the rest the text is quite good, so using the same text should be fine. Make sure to stay consistent with the terminology, but you already do a good job at that.
+For the rest, the text is quite good, so recycling the text should be fine. Make sure to continue staying consistent with the terminology.
 
 
 \section{Part 2}
@@ -84,15 +82,19 @@ The questions in this part probably require a single line to provide feedback to
 
 \subsection{What is the quality of the language/style/spelling used?}
 
-Quite good. It's on the level that you would expect in a research proposal. I didn't find spelling mistakes, just one small inconsistency on page 2. In the last sentence before the section `Research questions' you write `general purpose LLM' without a hyphen, and everywhere else, including in RQ1 on the same page, you write `general-purpose LLMs' correctly with a hyphen. The only reason I noticed this is because they are right next to each other, otherwise I would have glossed over it. Minor inconsistency
+Quite good. It's on the level that you would expect in a research proposal. There are no spelling mistakes, just one small inconsistency on page 2. In the last sentence before the section `Research questions' you write `general purpose LLM' without a hyphen, and everywhere else, including in RQ1 on the same page, you write `general-purpose LLMs' correctly with a hyphen. Minor inconsistency
 
 \subsection{What is the quality of the used terminology?}
 
 Good. You don't use overly difficult language, and the words that require explanation (like `LLM-as-a-Judge') are explained in the text.
 
-In the text below Table 3, you write `NVIDIA RTX 3090' and `24 GB of VRAM'. I myself, know what these two things mean, but that might not be the case for everyone. I think `\ldots on an RTX 3090, a graphical processing unit (GPU) made by NVIDIA' is a bit more descriptive and clear. Also `VRAM' is not explained and perhaps a bit redundant to add, unless you explicitely mention that the models will be using that VRAM during training, and/or that you are limited to models that will fit on entirely on the VRAM (unless you train in batches, of course).
+In the text below Table 3, you write `NVIDIA RTX 3090' and `24 GB of VRAM', these two terms might not be clear for everyone.
 
-You might also want to explain what the `B' means in the `Parameters' column of Table 3. I know it stands for `billion', but it might not be clear to everyone.
+`\ldots on an RTX 3090, a graphical processing unit (GPU) made by NVIDIA' is a bit more descriptive and clear.
+
+Also `VRAM' is not explained and perhaps a bit redundant to add, unless you explicitly mention that the models will be using that VRAM during training, and/or that you are limited to models that will fit entirely on the VRAM (unless you train in batches, of course).
+
+You might also want to explain what the `B' means in the `Parameters' column of Table 3. It's generally known to stand for `billion', but not everyone might know that.
 
 
 \subsection{Did the authors make good use of literature?}
@@ -110,12 +112,12 @@ Yes. Relevant literature is cited where it is necessary. You make good use of it
 
 \textbf{Research methods - Models}
 \begin{itemize}
-	\item Li et al.: using relevant literature to explain why you should use models of varying families/vendors, but I am not quite sure if you are planning on expanding on this, as Table 3 only lists 3 models.
+	\item Li et al.: While you use relevant literature to explain why you should use models of varying families/vendors, the experimental design (Table 3) does not reflect this motivation as it only contains 3 models.
 \end{itemize}
 
 \subsection{Is the proposal written with attention to detail?}
 
-It's best practice to cite the journal version of papers instead of the arXiv version if they have been published in a peer-reviewed journal. In some domains like Machine Learning citing the arXiv version is more common, because of the fast pace of the field leading to a lot of papers being on arXiv for a long time before they are published in a journal. In your case, most of the papers are several years old, so I would double check if they haven't been published in a peer-reviewed journal since then. For example, but not limited to, the following papers:
+It's best practice to cite the journal version of papers instead of the arXiv version if they have been published in a peer-reviewed journal. In some domains like Machine Learning citing the arXiv version is more common, because of the fast pace of the field leading to a lot of papers being on arXiv for a long time before they are published in a journal. In your case, most of the papers are several years old, so double-check if they haven't been published in a peer-reviewed journal since then. For example, but not limited to, the following papers:
 
 \begin{itemize}
 	\item \textbf{``Qlora: Efficient finetuning of quantized llms''} was published in NeurIPS 2026.
@@ -128,9 +130,9 @@ An important sidenote is that some papers just aren't published in a peer-review
 
 \subsection{Is the proposed research setup clear enough?}
 
-I appreciate the work you put into the figures, it helps visualise the setup together with the text. However, I did have some trouble following the arrows. You have written an entire research proposal on the topic, so the figures make 100\% sense to you, but for me as an outsider, it was a slight bit difficult to follow.
+The figures help visualise the setup together with the text. However, some might have trouble following the arrows as they are quite small. You have written an entire research proposal on the topic, so the figures make 100\% sense to you, but for outsiders it might be a slight bit difficult to follow.
 
-Flowcharts have standardised shapes, which I would recommend you to use. Rectangles for actions, diamonds for decisions, circles for start/end, arrows to indicate flow. Using this design-language will make it easier for outsiders to understand the flow.
+Flowcharts have standardised shapes, which could be worthwhile for you to use. Rectangles for actions, diamonds for decisions, circles for start/end, arrows to indicate flow. Using this design-language will make it easier for outsiders to understand the flow.
 
 It doesn't have to be a flowchart, you can also use a UML diagram or something else.
 
@@ -144,13 +146,12 @@ For me it is definitely interesting to read because the topic is highly relevant
 
 Yes. The planning spans 7 weeks, and the deadline for the assignment is 11 weeks after the peer-review is submitted, so you have spare time.
 
-You might want to take more time for the `System setup'. You have 3-4 spare weeks to allocate, so perhaps you can take 2 weeks for this instead of just 1? Writing a lot of code to set up an entire system can be more time-consuming than expected, and it's important to have a good system in place before you start making analyses. It's a bad habit of mine to want to start the analyses as soon as possible, but then I later find out the system isn't working properly and I have to go back and fix it.
+You might want to take more time for the `System setup'. You have 3-4 spare weeks to allocate, so perhaps you can take 2 weeks for this instead of just 1? Writing a lot of code to set up an entire system can be more time-consuming than expected, and it's important to have a good system in place before you start making analyses.
 
 
 \subsection{Is the proposed data analysis feasible?}
 
-Yes. You will evaluate the models on 4 evaluation metrics, which is feasible. You chose accuracy and a confusion matrix, which for classification tasks are the most used metrics, and for your specific use-case are the most relevant.
-
+Yes. You will evaluate the models on 4 evaluation metrics, which is feasible. You chose accuracy and a confusion matrix, which for classification tasks are the most used metrics, and for your specific use-case are the most relevant. You can also add additional metrics like F1-score, precision and recall if they apply to your specific use-case. Perhaps some of the violations are worse than others, so you can weigh them differently in the evaluation. You can also add an error-analysis to see where such `judge LLMs' fail.
 
 \end{document}
 
