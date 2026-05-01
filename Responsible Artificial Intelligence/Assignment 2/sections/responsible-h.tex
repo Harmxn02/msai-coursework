@@ -1,3 +1,79 @@
-% \subsection{Technical Layer}
-% \subsection{Sociotechnical Layer}
-% \subsection{Governance Layer}
+% once the ethical issue(s) is/are identified and the impact and stakeholders are known, one or more design directions are considered to making the AI system responsible: value alignment, Explainable AI, governance etc.
+
+
+% \subsection{Design Introduction}
+
+% introduce the type of method you plan to consider applying corresponding controls and transform the existing system into a responsible AI system.
+
+
+% \subsection{Design Description}
+
+% discuss the responsible AI methods applied using one or more of the instruments of choice (e.g., just text, design architecture, short implementation etc.)
+
+
+
+\newpage
+\subsection{Lijst van problemen}
+
+\subsubsection{Technical}
+
+\begin{itemize}
+	\item Opaque ensemble, no XAI methods applied
+	\item No reasoning chain
+	\item Proportionality assessment impossible without understanding the basis of a recommendation
+	\item Violations of P-01 (transparency) and P-03 (accountability)
+	\item Compounded by CH-06 (lack of technical understanding of those who make the decisions) and CH-09 (absense of legal framework) (\citet{khan2021ethicsaisystematicliterature})
+\end{itemize}
+
+\subsubsection{Socio-technical}
+
+\begin{itemize}
+	\item Palestinians are indirect stakeholders who were never consulted $\rightarrow$ VSD failure
+	\item Assymetry of consequencesbetween operators and Palestinians
+	\item Commanders lack sufficient information and meaningful freedom of action $\rightarrow$ violation of two conditions of Meaningul Human Control (\citet{mhcof})
+	\item 20-second review window makes critical evaluation impossible
+	\item Automation bias, rubber-stamping
+\end{itemize}
+
+
+\subsubsection{Governance}
+
+\begin{itemize}
+	\item No Article 36 review because Israel has nto ratified Protocol I
+	\item No ethical impact analysis done before deployment (for exampel VSD)
+	\item Responsibility is fragmented, no clear accountability chain
+	\item No real-time IHL compliance monitoring
+	\item No post-deployment audit or incident review process
+	\item Lavender extension has 10\% error tolerance $\rightarrow$ civilian casualties inevitable
+\end{itemize}
+
+
+\subsection{Mogelijke oplossing a.d.h.v. relevante literatuur}
+
+De `nieuwe' literatuur komen uit het bestand `RAI Assignment 2 Description' maar hebben we nog niet in de tekst verwerkt.
+
+\subsubsection{Technical layer (XAI, interpretability)}
+\begin{itemize}
+	\item \textbf{\citet{arrieta2019explainableartificialintelligencexai}}: post-hoc solutions (SHAP, LIME, attention visualisation) applied to ensemble models
+	\item \textbf{\citet{miller2018explanationartificialintelligenceinsights}}: % TODO
+	\item \textbf{(NEW) Liao, Gruen \& Miller (2020)}: XAI question bank $\rightarrow$ operationalises user-centred explainability (Why this target? What evidence supports this recommendation?)
+	\item \textbf{(NEW) Morley et al. (2020)}: maps ethics tools onto ML pipeline stages (data, model, deployment) so we can use this to say where and how speicifc XAI tools can be added before/during/after model development
+\end{itemize}
+
+
+\subsubsection{Socio-technical layer (MHC, automation bias, VSD, stakeholder inclusion)}\
+\begin{itemize}
+	\item \textbf{\citet{mhcof}}: The 2 MHC conditions
+	\item \textbf{\citet{parasuraman2010complacency}}: VSD's `tripartite' methodology (conceptual, empirical, technical) $\rightarrow$ concrete process for how stakeholders shold have been consulted (Palestinians were not consulted)
+	\item \textbf{(NEW) Friedman, Kahn, Borning \& Huldtgren (2013)}: % TODO
+	\item \textbf{(NEW) Amershi et al. (2019)}: human-AI interaction guidelines (calibration of trust, commuinicating uncertainty, supporting error recovery) $\rightarrow$ design principles
+\end{itemize}
+
+
+\subsubsection{Governance (accountability, legal frameworks, organisational response)}
+\begin{itemize}
+	\item \textbf{\citet{info12090385}}: addresses the empty cell in Figure 1 $\rightarrow$ required governance interventions (pre-deployment EIA, real-time IHL compliance, post-deployment audit)
+	\item \textbf{(NEW) Stahl et al. (2022)}: Use the 3-level mitigation (policy-level strategies, guidance mechanisms, corporate governance) to categorise governance solutions
+	\item \textbf{\citet{aimag.v40i1.2848}}: Canadian pre-deployment legal assessment protocols (Israel does not follow Article 36 review process)
+	\item \textbf{\citet{khan2021ethicsaisystematicliterature}}: P-01/P-03/CH-06/CH-09 $\rightarrow$ we can use this to motiviate specific governance solutions
+\end{itemize}
