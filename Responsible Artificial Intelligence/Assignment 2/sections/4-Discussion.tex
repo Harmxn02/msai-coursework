@@ -1,0 +1,57 @@
+% \begin{itemize}
+%     \item CHOF, XAI (shap etc, interface lock), Glass Box, SHAP, GRAD-CAM hangen allemaal samen en zijn los van elkaar niet genoeg.
+%     \item XAI is useless without deliberation time, deliberation standard can not be enforced without Glass Box audit trail, and the audit trail is useless when there is none. 
+%     \item This also matched with CHOF, oversight must be present in all layers
+%     \item Morley also finds this, when tools are only applied in testing and not deployment and monitoring/during
+% \end{itemize}
+
+% \begin{itemize}
+%     \item SHAP/Grad-CAM + Contrastive UI, mandatory deliberation locks + IHL checklist + Glass Box governance
+%     \item controls are mutually reinforcing: technical explainability is only meaningful if socio-technical layer enforces engagement with it, and both are only enforceable if governance mandates them
+%     \item limitation = Israel's cooperation
+% \end{itemize}
+
+We propose three controls: a pre-decision explainability layer, mandatory deliberation with IHL checks and Glass Box governance, each mirroring the CHOF layers as proposed by \citet{info12090385}.
+At the technical layer SHAP and Grad-CAM are identified as evidence recommendations, while \citet{miller2018explanationartificialintelligenceinsights}'s contrastive framing and \cite{liao2020questioning}'s Question Bank translate these feature scores into the Why, Why-not, and What-if that IHL requires.
+At the sociotechical layer, a hard interface lock enforces deliberation time, replacing the single-button press approval which enables rubber-stamping. 
+At the governance layer, \cite{info12090385}'s Glass Box defines compliance norms at the in-output, creating an audit trail which enables reviewing without accessing classified internals. 
+What is essential to note, is that each of these controls are mutually dependent. The XAI panel is meaningless without deliberation time, and without the Glass Box and thus the audit trail, nothing is verifiable. Which is in line with \citet{morley2020what}'s findings: post-hoc explainability are only implemented in the testing design, leaving deployment and monitoring underdeveloped.
+
+
+
+% Conclusions: https://glassboxmedicine.com/wp-content/uploads/2020/05/modified-figure-1-dog-cat.png kan niet downloaden
+Unfortunately these recommendations carry limitations. Where the Glass Box approach depends on the political will to establish an independent audit body, one that Israel's non-ratification of the Additional Protocol I signals might be difficult to achieve.
+Together with \citet{friedman2013vsd}'s VSD methodology requiring elicitation with affected stakeholders, which given active conflict is practically infeasible.
+And the deliberation standard and volume constrains which would reduce operational tempo, the very advantage motivating most of the AWS.
+
+
+
+
+
+
+
+
+
+
+\subsection{Stakeholder impact analysis}
+% Harman
+
+The proposed solutions would impact stakeholders in several ways. For IDF commanders, the combination of contrastive XAI explanations and mandatory deliberation locks would restore genuine freedom of action through multiple mechanisms: commanders would receive the information necessary to critically evaluate each recommendation, and the interface lock would guarantee sufficient time to do so. This transforms the approval from a formality into actual judgement. While commanders may not welcome the additional scrutiny this entails, it is legally defensible in a way that rubber-stamping is not. Should a strike resulting in civilian casualties ever be investigated by an independent auditor or an international tribunal, commanders would be able to demonstrate precisely how they arrived at their decision. rather than having no legal defence whatsoever.
+
+For Palestinian civilians, mandating civilian density and protected-site proximity as structural interface requirements would embed their interests directly into the decision workflow. When combined with a completed IHL checklist and appropriate handling of low-confidence recommendations, this could meaningfully reduce civilian casualties. The post-hoc audit trail would also enable accountability for strikes that caused unjustified harm. Applying VSD to elicit civilian values directly may be infeasible for a classified military system, meaning this representation remains necessarily indirect.
+
+For the international community and the legitimacy of IHL, the Glass Box framework would enable independent verification of a classified system's compliance record for the first time. This shifts responsibility diffusion \textemdash{} currently spread across developers, the algorithm, and commanders with no traceable chain \textemdash{} towards a structured and auditable record of authorisation. This creats a foundation for institutional trust in AI-assisted military systems.
+
+
+
+\subsection{Concluding remarks and future perspectives}
+
+% Alexander
+
+
+
+
+% Harman
+
+Habsora's problems can easily be reproduced by deploying such systems without compensating oversight. This case sets a precedent for how AI targeting systems are evaluated under IHL. There is a clear need for international binding frameworks, and a need for standardising pre-deployment Environmental Impact Assessment (EIA) requirements for AWS globally. With AI continuing to advance, ethical considerations and legal compliance need to be integrated into the development and deployment of autonomous weapon systems to ensure accountability and protect human rights.
+

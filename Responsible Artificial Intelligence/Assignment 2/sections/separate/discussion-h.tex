@@ -12,27 +12,32 @@
 % \end{itemize}
 
 
-\subsection{Proposed solutions}
+% \subsection{Proposed solutions}
+% een overzicht van alle solutions die we hebben voorgesteld
 
-% = Briefly recap the three-layer solution (SHAP/Grad-CAM + constrastive UI, mandatory deliberation locks + IHL checklist, Glass Box governance)
-% = Argue that the controls are mutually reinforcing: technical explainability is only meaningful is the sociotechnical layer enforces engagement with it, and both are only enforceable if governance mandates them
-% = Acknowledge the key limitation: none of the proposed solutions can be implemented without Israel's cooperation, and without Protocol I ratification there is no external lever to compel adoption
-
-We proposed a three-layer solution to address the ethical and legal issues identified in Habsora's deployment. At the technical layer, we recommend implementing explainability methods such as SHAP or Grad-CAM to provide operators with insights into the model's reasoning. This should be complemented by a contrastive user interface that highlights key features influencing each recommendation. At the socio-technical layer, we advocate for mandatory deliberation locks that require operators to engage with the explainability outputs before approving any target recommendations. This should be paired with an IHL checklist to ensure that legal considerations are systematically evaluated. At the governance layer we propose establishing a `Glass Box' audit trail that records all interactions with the system. This audit trail would allow for post-hoc accountability and compliance monitoring. These controls are mutually reinforcing: Technical explainability is only meaningful if the socio-technical layer enforces engagement with it, and both are only enforceable if governance mandates them. There is a key limitation to this proposal: none of these solutions can be implemented without Israel's cooperation. However, the proposed framework can serve as a blueprint for responsible AI deployment in military contexts, and could be adopted by other countries to set standards for AWS development and use.
+% \begin{itemize}
+%     \item SHAP/Grad-CAM + Contrastive UI, mandatory deliberation locks + IHL checklist + Glass Box governance
+%     \item controls are mutually reinforcing: technical explainability is only meaningful if socio-technical layer enforces engagement with it, and both are only enforceable if governance mandates them
+%     \item limitation = Israel's cooperation
+% \end{itemize}
 
 \subsection{Impact on stakeholders}
+% een overzicht van de 3 stakeholders, en hoe onze solution hun beinvloed
 
-% = IDF commanders: restored genuine freedom of action; reduced legal exposure through documented deliberation
-% = Palestinian civilians: surfacing civilian density as a structural interface requirement gives indirect stakeholders a form of representation in the decision loop
-% = International community / IHL legitimacy: Glass Box audit trail makes post-hoc accountability possible for the first time; shifts responsibility diffusion towards a traceable chain
+% \begin{itemize}
 
-The proposed solutions would impact stakeholders in several ways. For IDF commanders, the introduction of explainability and deliberation locks would restore genuine freedom of action by providing them with the necessary information to critically evaluate recommendations. This would also reduce their legal exposure by creating a documented trail of their decision-making process. For Palestinian civilians, displaying civilian density as a structural interface requirement would give indirect stakeholders a form of representation in the decision loop, potentially reducing civilian casualties. For the international community and the legitimacy of IHL, the implementation of a Glass Box audit trail would make post-hoc accountability possible for the first time, shifting responsibility diffusion towards a traceable chain that includes developers, operators, and commanders.
+
+%     \item IDF Commanders: ze krijgen minder legal exposure, want door documented deliberation valt de schuld niet compleet op hun. Ze krijgen ook `freedom of action' terug omdat ze niet enkel rubber-stampen
+%     \item Palestinian civilians: we raadde aan om `civilian density' onderdeel te maken van de HUD. Dit kan civilian causility verlagen, en geeft Palestijnen representatie in de decision loop
+%     \item International community / IHL: Glass Box audit trail maakt post-hoc accountability voor het eerst mogelijk. Hiervoor kon je moeilijk verantwoordelijkheid toekennen aan iemand
+% \end{itemize}
 
 
 \subsection{Concluding remarks and future perspectives}
+% spreekt voor zich
 
-% = Personal reflection: Habsora illustrates that opacity is not a bug but often an architectural inevitability -- the real failure is deploying such systems without compensating oversight
-% = Broader implication: the case sets a precedent for how AI targetting systems are evaluated under IHL, regardless of whether a state has ratified Protocol I
-% = Future outlook: calls for international binding frameworks (beyond UNESCO recommendation) and standardising pre-deployment EIA requirements for AWS globally
-
-Habsora's problems can easily be reproduced by deploying such systems without compensating oversight. This case sets a precedent for how AI targeting systems are evaluated under IHL. There is a clear need for international binding frameworks, and a need for standardising pre-deployment Environmental Impact Assessment (EIA) requirements for AWS globally. With AI continuing to advance, ethical considerations and legal compliance need to be integrated into the development and deployment of autonomous weapon systems to ensure accountability and protect human rights.
+% \begin{itemize}
+%     \item Personal reflection: \textsl{komt nog}
+%     \item Implications: deze casus zet een precedent voor hoe AWS worden `geevalueerd' onder IHL
+%     \item Future outlook: er is belang naar international binding frameworks en het globaal standaardiseren van pre-deployment EIA   
+% \end{itemize}
