@@ -33,6 +33,11 @@
 
 
 
+% dit zorgt ervoor dat de appendix niet gestretched word
+\raggedbottom
+
+
+
 
 \usepackage{csquotes}       % for quote blocks: \textquote{}
 
@@ -60,22 +65,9 @@
 
 
 \title{
-    IM0802 \textendash{} Responsible Artificial Intelligence \\
-    {\normalfont Assignment 2: ``Paper Title Goes Here''}
+    IM0802 \textendash{} Responsible Artificial Intelligence \\[0.2em]
+    {\normalfont Oversight Without Control: A Comprehensive Human Oversight Analysis of the Habsora AI Targeting System}
 }
-
-
-
-
-
-
-% The \author macro works with any number of authors. There are two commands
-% used to separate the names and addresses of multiple authors: \And and \AND.
-%
-% Using \And between authors leaves it to LaTeX to determine where to break the
-% lines. Using \AND forces a line break at that point. So, if LaTeX puts 3 of 4
-% authors names on the first line, and the last on the second line, try using
-% \AND instead of \And before the third author name.
 
 \author{
 \textbf{Alexander Soerjo} \\[0.3em] 852767169 \And
@@ -84,40 +76,14 @@
 \begin{document}
 \maketitle
 
-
-\begin{abstract}
-    % \input{sections/separate/abstract-a}
-    % \input{sections/separate/abstract-h}
-    \input{sections/0-Abstract.tex}
-\end{abstract}
-
-\section{Introduction 350}
-\label{sec:introduction}
+\input{sections/0-Abstract.tex}
 \input{sections/1-Introduction.tex}
-
-
-\section{Ethical Issue Identification 750}
-\label{sec:ethical}
 \input{sections/2-Ethical-Issue-Identification}
-
-
-\section{Responsible Solution Design 900}
-\label{sec:responsible}
 \input{sections/3-Responsible-Solution-Design.tex}
-% \input{sections/separate/responsible-a.tex}
-% \input{sections/separate/responsible-h.tex}
-
-
-\section{Discussion and Conclusions 400}
-\label{sec:discussion}
-\input{sections/4-Discussion.tex}
-%\input{sections/separate/discussion-a.tex}
-%\input{sections/separate/discussion-h.tex}
-
+\input{sections/4-Discussion}
 
 \newpage
 \bibliography{references}
-
 
 \newpage
 \input{sections/0-Appendix}
