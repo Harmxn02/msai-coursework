@@ -1,6 +1,6 @@
-# Research Proposal
+# Report
 
-You can find the GitHub-repository associated with the research proposal for the course **IM1312: Research Methods for Artificial Intelligence** here:
+You can find the GitHub-repository associated with the report for the course **IM1312: Research Methods for Artificial Intelligence** here:
 
 <https://github.com/Harmxn02/RMAI-Project>
 
