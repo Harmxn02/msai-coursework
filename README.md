@@ -38,7 +38,7 @@ e.g. `Wiskunde voor Machine Learning - Assignment 1` -->
 | --- | ----------- | --------------------------------------------------------------- | ----------------------------------------------------------------- |
 | 🟩  | IM0712      | Key Topics in Artificial Intelligence                           | [[link]](./Key%20Topics%20in%20Artificial%20Intelligence/)        |
 | 🟨  | IM0902      | Bayesian Reasoning and Learning                                 | [[link]](./Bayesian%20Reasoning%20and%20Learning/)                |
-| 🟨  | IM0802      | Responsible Artificial Intelligence                             | [[link]](./Responsible%20Artificial%20Intelligence/)              |
+| 🟩  | IM0802      | Responsible Artificial Intelligence                             | [[link]](./Responsible%20Artificial%20Intelligence/)              |
 | 🟨  | IM1312      | Research Methods for Artificial Intelligence                    | [[link]](./Research%20Methods%20for%20Artificial%20Intelligence/) |
 | 🟧  | IM1202      | Model-Based Artificial Intelligence                             |                                                                   |
 | 🟧  | IM1412      | Generative Artificial Intelligence                              |                                                                   |
